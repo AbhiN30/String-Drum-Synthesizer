@@ -1,4 +1,4 @@
-# String-Drum-Synthesizer
+# String/Drum Synthesizer
 
 ## Team Members:
 - Abhi Nayak (arnayak2) 
