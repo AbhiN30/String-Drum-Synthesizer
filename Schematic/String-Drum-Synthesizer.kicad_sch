@@ -6880,7 +6880,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "114"
+		(property "Value" "110"
 			(at -82.55 19.0499 0)
 			(effects
 				(font
@@ -7213,7 +7213,7 @@
 				)
 			)
 		)
-		(property "Value" "114"
+		(property "Value" "110"
 			(at -87.63 -10.16 90)
 			(effects
 				(font
@@ -8207,7 +8207,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "750"
+		(property "Value" "820"
 			(at -154.94 -7.6201 0)
 			(effects
 				(font
@@ -8756,7 +8756,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "114"
+		(property "Value" "110"
 			(at -82.55 -15.2401 0)
 			(effects
 				(font
@@ -9027,7 +9027,7 @@
 				)
 			)
 		)
-		(property "Value" "114"
+		(property "Value" "110"
 			(at -87.63 22.86 90)
 			(effects
 				(font
@@ -9302,7 +9302,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "75k"
 			(at -118.11 -12.7001 0)
 			(effects
 				(font
@@ -9511,7 +9511,7 @@
 				)
 			)
 		)
-		(property "Value" "114"
+		(property "Value" "110"
 			(at -69.85 35.56 90)
 			(effects
 				(font
