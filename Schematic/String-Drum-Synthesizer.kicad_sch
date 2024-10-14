@@ -6363,12 +6363,6 @@
 		(uuid "7874d7ef-143f-46a0-b0c9-dec561dddbbb")
 	)
 	(junction
-		(at 679.45 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7aa8c396-1a4f-4d03-ae76-5349ffb69ac1")
-	)
-	(junction
 		(at 622.3 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6564,16 +6558,6 @@
 	)
 	(wire
 		(pts
-			(xy 679.45 49.53) (xy 701.04 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12b32c22-b376-4598-b5c2-4f977d033a05")
-	)
-	(wire
-		(pts
 			(xy 591.82 127) (xy 593.09 127)
 		)
 		(stroke
@@ -6644,16 +6628,6 @@
 	)
 	(wire
 		(pts
-			(xy 679.45 57.15) (xy 701.04 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21dda794-63f9-40f5-a1a8-0c1865eeed4e")
-	)
-	(wire
-		(pts
 			(xy 412.75 71.12) (xy 412.75 74.93)
 		)
 		(stroke
@@ -6671,6 +6645,16 @@
 			(type default)
 		)
 		(uuid "2311a038-a0e4-4c36-afe7-32d2acc53b23")
+	)
+	(wire
+		(pts
+			(xy 679.45 57.15) (xy 693.42 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "242195ab-1ced-4a3d-a416-b52036934df7")
 	)
 	(wire
 		(pts
@@ -7961,17 +7945,6 @@
 		)
 		(uuid "a5504919-7fd6-4a0d-bf54-8f30c1f7aa00")
 	)
-	(label "USB_OTG_HS_VBUS_DETECTION"
-		(at 701.04 57.15 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a5e2d554-5ff3-4eb4-9565-bbacff33fb94")
-	)
 	(label "USB_OTG_HS_VBUS"
 		(at 723.9 168.91 0)
 		(fields_autoplaced yes)
@@ -8094,7 +8067,7 @@
 		(uuid "e3ef78f3-522e-452e-b31c-3d0b7e324a48")
 	)
 	(label "USB_OTG_HS_VBUS"
-		(at 701.04 49.53 0)
+		(at 693.42 57.15 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11614,7 +11587,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "82k"
+		(property "Value" "10k"
 			(at 683.26 62.2299 0)
 			(effects
 				(font
@@ -13728,7 +13701,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "33k"
+		(property "Value" "4k7"
 			(at 683.26 54.6099 0)
 			(effects
 				(font
