@@ -1,4 +1,11 @@
-23741809085238586
+23750451286046699
+10029449_111RLF
+CONN_10029449111_AMP
+
+10029449-111RLF 
+0
+23
+23
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -64651,6 +64658,27 @@ Yellow 5381 Series LED
 0
 2
 2
+LM3900DR
+D14
+
+LM3900DR 
+0
+14
+14
+LM3900DR
+D14-L
+
+LM3900DR 
+0
+14
+14
+LM3900DR
+D14-M
+
+LM3900DR 
+0
+14
+14
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -95843,6 +95871,13 @@ igbt diode module
 0
 25
 25
+USB_A1HSW6
+OST_USB-A1HSW6
+
+
+0
+4
+4
 Valve
 Valve_ECC-83-1
 Valve ECC-83-1 round pins
