@@ -76,7 +76,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "../PCBs/")
+			(outputdirectory "../PCBs/V1")
 		)
 	)
 	(net 0 "")
@@ -12068,7 +12068,7 @@
 			(uuid "7c8dbaa6-557f-4d87-a5cb-8115b60c28f9")
 		)
 		(fp_text user "PCB Edge"
-			(at 5.715 0 360)
+			(at 5.715 0 0)
 			(layer "Dwgs.User")
 			(uuid "258a7619-cd1e-46f5-b85c-0ee340fc3707")
 			(effects
@@ -28877,8 +28877,8 @@
 	)
 	(gr_poly
 		(pts
-			(xy 111.379 27.432) (xy 212.344 27.432) (xy 212.344 135.509) (xy 212.344 135.509) (xy 114.173 135.509)
-			(xy 111.379 135.509) (xy 111.379 27.480121) (xy 111.379 27.432)
+			(xy 111.379 27.432) (xy 212.344 27.432) (xy 212.344 135.509) (xy 114.173 135.509) (xy 111.379 135.509)
+			(xy 111.379 27.480121) (xy 111.379 27.432)
 		)
 		(stroke
 			(width 0.05)

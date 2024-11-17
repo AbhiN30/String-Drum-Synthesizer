@@ -482,7 +482,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "./",
-      "plot": "../PCBs/",
+      "plot": "../PCBs/V1",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
