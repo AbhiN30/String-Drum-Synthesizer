@@ -8,12 +8,17 @@ uint16_t adc_values[8];
 // DAC output buffer and sine wave generation parameters
 #define SAMPLE_RATE 44100        // 44.1 kHz sample rate for high-quality audio
 #define SINE_WAVE_FREQUENCY 1000 // 1 kHz sine wave
+#define BUFFER_SIZE 256
+uint16_t nextAudioBuffer[BUFFER_SIZE];
+uint16_t currAudioBuffer[BUFFER_SIZE];
 uint16_t sineWaveBuffer[256];    // Buffer to store 256 sine wave samples
 
 // USB device state (handled externally by USB library)
 extern USB_HandleTypeDef hUsbDeviceFS;
 
 // Global variable for timer interrupt
+volatile uint16_t audioBufferIndex = 0;
+// volatile uint16_t audioBufferCopyIndex = 0; // index of sample to copy from next to curr audio buffer
 volatile uint16_t sineWaveIndex = 0;
 
 // Function declarations
@@ -251,6 +256,25 @@ void GenerateSineWave(void)
     }
 }
 
+void GetNextBuffer(void)
+{
+    // generate sine wave
+    for (uint16_t i = 0; i < BUFFER_SIZE; ++i) 
+    {
+        nextAudioBuffer[i] = 0;
+    }
+
+    // copy to currAudioBuffer
+    uint16_t currCopyIndex = 0;
+    do {
+        for (uint16_t i = currCopyIndex; i < audioBufferIndex; ++i)
+        {
+            currAudioBuffer[i] = nextAudioBuffer[i];
+        }
+        currCopyIndex = audioBufferIndex;
+    } while (audioBufferIndex < BUFFER_SIZE);
+}
+
 // Configure Timer (TIM2) for DAC sample rate
 void ConfigureTimer(void)
 {
@@ -278,11 +302,19 @@ void TIM2_IRQHandler(void)
     if (__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_UPDATE) != RESET) {
         __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_UPDATE);
 
+        // // Output the next sine wave sample to the DAC
+        // HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sineWaveBuffer[sineWaveIndex]);
+        // sineWaveIndex++;
+        // if (sineWaveIndex >= 256) {
+        //     sineWaveIndex = 0;
+        // }
+
         // Output the next sine wave sample to the DAC
-        HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sineWaveBuffer[sineWaveIndex]);
-        sineWaveIndex++;
-        if (sineWaveIndex >= 256) {
-            sineWaveIndex = 0;
+        HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, currAudioBuffer[audioBufferIndex]);
+        audioBufferIndex++;
+        if (audioBufferIndex >= BUFFER_SIZE) {
+            audioBufferIndex = 0;
+            // GetNextBuffer(); how do we make an async call?
         }
     }
 }
