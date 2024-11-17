@@ -6,9 +6,15 @@
 uint16_t adc_values[8];
 
 // DAC output buffer and sine wave generation parameters
-#define SAMPLE_RATE 44100 // 44.1 kHz sample rate for high-quality audio
+#define SAMPLE_RATE 44100        // 44.1 kHz sample rate for high-quality audio
 #define SINE_WAVE_FREQUENCY 1000 // 1 kHz sine wave
-uint16_t sineWaveBuffer[256]; // Buffer to store 256 sine wave samples
+uint16_t sineWaveBuffer[256];    // Buffer to store 256 sine wave samples
+
+// USB device state (handled externally by USB library)
+extern USB_HandleTypeDef hUsbDeviceFS;
+
+// Global variable for timer interrupt
+volatile uint16_t sineWaveIndex = 0;
 
 // Function declarations
 void SystemClock_Config(void);
@@ -22,9 +28,7 @@ void ConfigureDAC(void);
 void GenerateSineWave(void);
 void ConfigureTimer(void);
 
-// USB device state (handled externally by USB library)
-extern USB_HandleTypeDef hUsbDeviceFS;
-
+// Main program
 int main(void)
 {
     // Initialize hardware
@@ -170,12 +174,6 @@ static void MX_GPIO_Init(void)
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF12_OTG_HS_FS;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-    // --- Other Connections ---
-    // PH0 and PH1 are connected to each other - No GPIO configuration required in this code
-    // BOOT0 is grounded via a 10kΩ resistor - No GPIO configuration required in this code
-    // VCAP_1 is connected to ground with a 2.2 μF capacitor - No GPIO configuration required in this code
-    // VSS, VSSA (ground), VBAT, VDD, VDDA (3.3V) - No GPIO configuration required in this code
 }
 
 // ADC Initialization
@@ -197,7 +195,7 @@ static void MX_ADC_Init(void)
     HAL_ADC_Init(&hadc1);
 
     // Configure each ADC channel
-    sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
+    sConfig.SamplingTime = ADC_SAMPLETIME_15CYCLES;
     for (int i = 0; i < 8; i++) {
         sConfig.Rank = i + 1; // Set rank for each channel
         sConfig.Channel = i;  // Channel number from PA0-3, PA6-7, PB0-1
@@ -236,45 +234,56 @@ void ConfigureDAC(void)
     HAL_DAC_Init(&hdac);
 
     DAC_ChannelConfTypeDef sConfig = {0};
-    sConfig.DAC_Trigger = DAC_TRIGGER_NONE;  // Software trigger (for arbitrary waveform generation)
+    sConfig.DAC_Trigger = DAC_TRIGGER_NONE;  // Software trigger (for arbitrary timing control)
     sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
     HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1);
+
+    // Enable the DAC output
+    HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
 }
 
-// Generate the sine wave in the buffer
+// Generate a sine wave in the buffer
 void GenerateSineWave(void)
 {
     for (int i = 0; i < 256; i++) {
-        sineWaveBuffer[i] = (sin(2 * M_PI * i / 256) + 1) * 2047;  // Scale to 12-bit DAC range
+        // Generate sine wave samples in the buffer
+        sineWaveBuffer[i] = (uint16_t)((sin(2 * M_PI * SINE_WAVE_FREQUENCY * i / 256) * 2047) + 2047);
     }
 }
 
-// Configure Timer to periodically output sine wave samples
+// Configure Timer (TIM2) for DAC sample rate
 void ConfigureTimer(void)
 {
-    TIM_HandleTypeDef htim;
-    __HAL_RCC_TIM6_CLK_ENABLE();
+    TIM_HandleTypeDef htim2;
+    __HAL_RCC_TIM2_CLK_ENABLE();
 
-    htim.Instance = TIM6;
-    htim.Init.Prescaler = 0;  // Adjust prescaler for the desired timer frequency
-    htim.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim.Init.Period = (HAL_RCC_GetPCLK1Freq() / SAMPLE_RATE) - 1;
-    htim.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-    HAL_TIM_Base_Init(&htim);
-
-    HAL_TIM_Base_Start_IT(&htim);  // Enable the timer interrupt
-}
-
-// Timer interrupt handler to output sine wave values to DAC
-void TIM6_DAC_IRQHandler(void)
-{
-    static uint16_t sineIndex = 0;
-
-    if (__HAL_TIM_GET_FLAG(&htim, TIM_FLAG_UPDATE)) {
-        __HAL_TIM_CLEAR_FLAG(&htim, TIM_FLAG_UPDATE);
-
-        // Output next value from sine wave buffer to DAC
-        HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sineWaveBuffer[sineIndex]);
-        sineIndex = (sineIndex + 1) % 256;  // Loop through the sine wave buffer
+    htim2.Instance = TIM2;
+    htim2.Init.Prescaler = 4799; // Prescaler to divide 216 MHz to 45 kHz
+    htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim2.Init.Period = 999;     // Period to generate interrupt every 22.7 microseconds for 44.1 kHz
+    htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim2.Init.RepetitionCounter = 0;
+    
+    if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+        Error_Handler();
+    }
+    if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+        Error_Handler();
     }
 }
+
+// Timer interrupt handler (called on each timer update event)
+void TIM2_IRQHandler(void)
+{
+    if (__HAL_TIM_GET_FLAG(&htim2, TIM_FLAG_UPDATE) != RESET) {
+        __HAL_TIM_CLEAR_IT(&htim2, TIM_IT_UPDATE);
+
+        // Output the next sine wave sample to the DAC
+        HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sineWaveBuffer[sineWaveIndex]);
+        sineWaveIndex++;
+        if (sineWaveIndex >= 256) {
+            sineWaveIndex = 0;
+        }
+    }
+}
+
