@@ -54,7 +54,7 @@
 /* #define HAL_SDRAM_MODULE_ENABLED */
 /* #define HAL_HASH_MODULE_ENABLED */
 /* #define HAL_I2C_MODULE_ENABLED */
-/* #define HAL_I2S_MODULE_ENABLED */
+#define HAL_I2S_MODULE_ENABLED
 /* #define HAL_IWDG_MODULE_ENABLED */
 /* #define HAL_LTDC_MODULE_ENABLED */
 /* #define HAL_RNG_MODULE_ENABLED */
@@ -124,7 +124,7 @@
   * @brief External Low Speed oscillator (LSE) value.
   */
 #if !defined  (LSE_VALUE)
- #define LSE_VALUE  32768U    /*!< Value of the External Low Speed oscillator in Hz */
+ #define LSE_VALUE  0U    /*!< Value of the External Low Speed oscillator in Hz */
 #endif /* LSE_VALUE */
 
 #if !defined  (LSE_STARTUP_TIMEOUT)
