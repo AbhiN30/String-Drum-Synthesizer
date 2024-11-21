@@ -3650,3 +3650,1306 @@ java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()"
 2024-11-20 17:35:52,891 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 501mS.
 2024-11-20 17:35:52,891 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
 2024-11-20 17:35:52,893 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 17:42:47,079 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 572927840 Bytes (1073741824)
+2024-11-20 17:42:47,137 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 588134240 Bytes (1073741824)
+2024-11-20 17:42:47,281 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 380735152 Bytes (1073741824)
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 17:42:47,388 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 17:42:47,389 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 17:42:47,392 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 17:42:47,448 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 17:42:47,481 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 17:42:47,494 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 17:42:47,527 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 17:42:47,570 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 17:42:47,603 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 17:42:47,607 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 17:42:47,638 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 17:42:47,648 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 17:42:47,685 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 17:42:47,690 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 17:42:47,724 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 17:42:47,734 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 17:42:47,788 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 17:42:47,792 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 17:42:47,823 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 17:42:47,832 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 17:42:47,870 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 17:42:47,887 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 17:42:47,923 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 17:42:47,928 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 17:42:47,983 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 17:42:48,343 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 284mS.
+2024-11-20 17:42:48,346 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 17:42:48,382 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 17:42:48,879 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 533mS.
+2024-11-20 17:42:48,880 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 1mS.
+2024-11-20 17:42:48,886 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 17:48:08,650 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 683722488 Bytes (1073741824)
+2024-11-20 17:48:08,713 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 704675200 Bytes (1073741824)
+2024-11-20 17:48:10,505 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 456864320 Bytes (1073741824)
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 17:48:10,572 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 17:48:10,573 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 17:48:10,576 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 17:48:10,613 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 17:48:10,646 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 17:48:10,657 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 17:48:10,691 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 17:48:10,735 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 17:48:10,769 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 17:48:10,772 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 17:48:10,803 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 17:48:10,812 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 17:48:10,856 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 17:48:10,862 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 17:48:10,897 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 17:48:10,908 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 17:48:10,960 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 17:48:10,964 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 17:48:10,994 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 17:48:11,002 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 17:48:11,042 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 17:48:11,058 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 17:48:11,094 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 17:48:11,098 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 17:48:11,153 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 17:48:11,415 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 188mS.
+2024-11-20 17:48:11,418 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 17:48:11,451 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 17:48:11,965 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 548mS.
+2024-11-20 17:48:11,966 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 1mS.
+2024-11-20 17:48:11,968 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 17:57:46,717 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 509375096 Bytes (1073741824)
+2024-11-20 17:57:46,853 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 526152312 Bytes (1073741824)
+2024-11-20 17:57:51,994 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 595707280 Bytes (1073741824)
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 17:57:52,064 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 17:57:52,065 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 17:57:52,068 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 17:57:52,104 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 17:57:52,138 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 17:57:52,152 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 17:57:52,189 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 17:57:52,231 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 17:57:52,263 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 17:57:52,267 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 17:57:52,299 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 17:57:52,309 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 17:57:52,351 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 17:57:52,356 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 17:57:52,392 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 17:57:52,404 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 17:57:52,457 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 17:57:52,462 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 17:57:52,494 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 17:57:52,503 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 17:57:52,539 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 17:57:52,555 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 17:57:52,590 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 17:57:52,595 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 17:57:52,647 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 17:57:52,896 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 174mS.
+2024-11-20 17:57:52,902 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 17:57:52,943 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 17:57:53,501 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 598mS.
+2024-11-20 17:57:53,501 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 17:57:53,504 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:05:15,307 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:05:15,307 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:05:15,307 [INFO] I2sManager:553 - AudioClock : 7998Divider : 189Odd : 1
+2024-11-20 18:05:17,780 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:05:17,780 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:05:17,780 [INFO] I2sManager:553 - AudioClock : 7998Divider : 189Odd : 1
+2024-11-20 18:05:17,825 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:05:17,825 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:05:17,825 [INFO] I2sManager:553 - AudioClock : 7998Divider : 189Odd : 1
+2024-11-20 18:05:17,841 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:05:17,841 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:05:17,841 [INFO] I2sManager:553 - AudioClock : 7998Divider : 189Odd : 1
+2024-11-20 18:05:23,772 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:05:23,772 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:05:23,772 [INFO] I2sManager:553 - AudioClock : 7998Divider : 189Odd : 1
+2024-11-20 18:05:25,716 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:05:27,021 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:05:28,295 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:05:33,899 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 927954560 Bytes (1073741824)
+2024-11-20 18:05:33,961 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 943683200 Bytes (1073741824)
+2024-11-20 18:05:34,106 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 412377920 Bytes (1073741824)
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 18:05:34,235 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 18:05:34,237 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:05:34,240 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:05:34,241 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:05:34,241 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:05:34,280 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 18:05:34,311 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 18:05:34,322 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 18:05:34,355 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 18:05:34,424 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 18:05:34,457 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 18:05:34,460 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 18:05:34,491 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 18:05:34,501 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 18:05:34,542 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 18:05:34,547 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 18:05:34,582 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 18:05:34,593 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 18:05:34,646 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 18:05:34,650 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 18:05:34,681 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 18:05:34,690 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 18:05:34,728 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 18:05:34,745 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 18:05:34,780 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 18:05:34,786 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 18:05:34,838 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 18:05:35,062 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 150mS.
+2024-11-20 18:05:35,064 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 18:05:35,098 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 18:05:35,551 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 487mS.
+2024-11-20 18:05:35,552 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:05:35,554 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:05:36,947 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:05:51,476 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 643813864 Bytes (1073741824)
+2024-11-20 18:05:51,543 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 659542504 Bytes (1073741824)
+2024-11-20 18:05:51,696 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 458097440 Bytes (1073741824)
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 18:05:51,801 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 18:05:51,802 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:05:51,805 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:05:51,806 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:05:51,842 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 18:05:51,874 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 18:05:51,885 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 18:05:51,918 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 18:05:51,989 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 18:05:52,021 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 18:05:52,024 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 18:05:52,056 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 18:05:52,065 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 18:05:52,102 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 18:05:52,107 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 18:05:52,140 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 18:05:52,150 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 18:05:52,203 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 18:05:52,207 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 18:05:52,237 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 18:05:52,246 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 18:05:52,285 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 18:05:52,308 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 18:05:52,345 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 18:05:52,350 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 18:05:52,404 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 18:05:52,633 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 154mS.
+2024-11-20 18:05:52,636 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 18:05:52,671 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 18:05:53,153 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 517mS.
+2024-11-20 18:05:53,153 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:05:53,155 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:14:39,988 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:14:39,988 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:14:39,988 [INFO] I2sManager:553 - AudioClock : 7998Divider : 189Odd : 1
+2024-11-20 18:15:37,765 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:15:37,781 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:15:37,781 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:15:37,781 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:15:37,800 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:15:39,492 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 755881984 Bytes (1073741824)
+2024-11-20 18:15:39,549 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 772136960 Bytes (1073741824)
+2024-11-20 18:15:41,847 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 861265920 Bytes (1073741824)
+2024-11-20 18:15:41,920 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 18:15:41,920 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 18:15:41,920 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 18:15:41,920 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 18:15:41,920 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 18:15:41,921 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 18:15:41,921 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 18:15:41,921 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 18:15:41,922 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 18:15:41,924 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:15:41,924 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:15:41,924 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:15:41,924 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:15:41,924 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:15:41,924 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:15:41,924 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:15:41,924 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:15:41,924 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:15:41,924 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:15:41,924 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:15:41,924 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:15:41,924 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:15:41,924 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:15:41,925 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:15:41,959 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 18:15:41,992 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 18:15:42,005 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 18:15:42,044 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 18:15:42,120 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 18:15:42,152 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 18:15:42,155 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 18:15:42,186 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 18:15:42,196 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 18:15:42,232 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 18:15:42,237 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 18:15:42,269 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 18:15:42,278 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 18:15:42,327 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 18:15:42,331 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 18:15:42,364 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 18:15:42,373 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 18:15:42,411 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 18:15:42,428 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 18:15:42,463 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 18:15:42,468 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 18:15:42,518 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 18:15:42,752 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 160mS.
+2024-11-20 18:15:42,755 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 18:15:42,787 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 18:15:43,262 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 507mS.
+2024-11-20 18:15:43,263 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:15:43,265 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:15:55,865 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:15:55,865 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:15:55,865 [INFO] I2sManager:553 - AudioClock : 47363Divider : 4Odd : 0
+2024-11-20 18:15:55,907 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:15:55,907 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:15:55,907 [INFO] I2sManager:553 - AudioClock : 47363Divider : 4Odd : 0
+2024-11-20 18:15:55,927 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:15:55,927 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:15:55,927 [INFO] I2sManager:553 - AudioClock : 47363Divider : 4Odd : 0
+2024-11-20 18:15:59,009 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,567x282,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:16:11,212 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 889677464 Bytes (1073741824)
+2024-11-20 18:16:11,276 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 905406104 Bytes (1073741824)
+2024-11-20 18:16:11,431 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 454319448 Bytes (1073741824)
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 18:16:11,546 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 18:16:11,547 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 18:16:11,551 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:16:11,551 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:16:11,551 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:16:11,552 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:16:11,553 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:16:11,553 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:16:11,553 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:16:11,553 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:16:11,553 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:16:11,554 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:16:11,590 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 18:16:11,622 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 18:16:11,634 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 18:16:11,668 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 18:16:11,739 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 18:16:11,770 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 18:16:11,774 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 18:16:11,806 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 18:16:11,817 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 18:16:11,854 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 18:16:11,859 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 18:16:11,893 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 18:16:11,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 18:16:11,955 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 18:16:11,959 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 18:16:11,989 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 18:16:11,997 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 18:16:12,035 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 18:16:12,052 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 18:16:12,088 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 18:16:12,094 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 18:16:12,146 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 18:16:12,376 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 152mS.
+2024-11-20 18:16:12,378 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 18:16:12,414 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 18:16:12,849 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 471mS.
+2024-11-20 18:16:12,850 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:16:12,852 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:16:29,521 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:16:29,521 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:16:29,521 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:16:29,565 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:16:29,565 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:16:29,565 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:16:29,595 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:16:29,595 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:16:29,595 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:17:11,363 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 809338416 Bytes (1073741824)
+2024-11-20 18:17:11,454 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 852873408 Bytes (1073741824)
+2024-11-20 18:17:11,628 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 431010952 Bytes (1073741824)
+2024-11-20 18:17:11,705 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 18:17:11,705 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 18:17:11,706 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 18:17:11,706 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 18:17:11,706 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 18:17:11,706 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 18:17:11,706 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 18:17:11,706 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 18:17:11,707 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 18:17:11,709 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:17:11,709 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:17:11,709 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:17:11,709 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:17:11,709 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:17:11,709 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:17:11,709 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:17:11,709 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:17:11,709 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:17:11,709 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:17:11,709 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:17:11,709 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream3
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_3
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:17:11,710 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:17:11,711 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:17:11,745 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 18:17:11,778 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 18:17:11,790 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 18:17:11,826 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 18:17:11,899 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 18:17:11,932 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 18:17:11,935 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 18:17:11,967 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 18:17:11,977 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 18:17:12,012 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 18:17:12,017 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 18:17:12,049 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 18:17:12,059 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 18:17:12,110 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 18:17:12,114 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 18:17:12,145 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 18:17:12,155 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 18:17:12,194 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 18:17:12,211 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 18:17:12,246 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 18:17:12,251 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 18:17:12,303 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 18:17:12,533 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 155mS.
+2024-11-20 18:17:12,535 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 18:17:12,569 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 18:17:13,028 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 493mS.
+2024-11-20 18:17:13,029 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 1mS.
+2024-11-20 18:17:13,031 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:22:36,354 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,511x282,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:25:30,258 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:25:30,258 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:25:30,258 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:25:30,277 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:25:30,298 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:25:30,298 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:25:30,299 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:25:30,316 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:25:30,423 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:25:30,423 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:25:30,423 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:25:30,447 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-20 18:25:30,451 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 18:25:30,451 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 18:25:30,451 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 18:27:23,124 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 900143656 Bytes (1073741824)
+2024-11-20 18:27:23,199 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 917969448 Bytes (1073741824)
+2024-11-20 18:27:25,740 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 487236744 Bytes (1073741824)
+2024-11-20 18:27:25,809 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-20 18:27:25,809 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-20 18:27:25,809 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: DMA
+2024-11-20 18:27:25,809 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2S
+2024-11-20 18:27:25,809 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-20 18:27:25,810 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-20 18:27:25,810 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: ADC
+2024-11-20 18:27:25,810 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-20 18:27:25,811 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.12.1.202409122256\\db\
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Stream4
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Initvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:327 - 	 sub Args: 
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Channelvalue: DMA_CHANNEL_0
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : FIFOModevalue: DMA_FIFOMODE_DISABLE
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : FIFOThresholdvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : MemBurstvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : MemBurstvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : PeriphBurstvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : PeriphBurstvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Statevalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Statevalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-11-20 18:27:25,813 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:27:25,814 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-11-20 18:27:25,814 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:27:25,814 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2024-11-20 18:27:25,814 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:27:25,814 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-11-20 18:27:25,814 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-11-20 18:27:25,814 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-11-20 18:27:25,848 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp_save
+2024-11-20 18:27:25,882 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\license.tmp
+2024-11-20 18:27:25,894 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp_save
+2024-11-20 18:27:25,928 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\gpio.tmp
+2024-11-20 18:27:25,970 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp_save
+2024-11-20 18:27:26,006 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma.tmp
+2024-11-20 18:27:26,009 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp_save
+2024-11-20 18:27:26,040 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\dma_GV.tmp
+2024-11-20 18:27:26,050 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c_save
+2024-11-20 18:27:26,091 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_it.c
+2024-11-20 18:27:26,097 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h_save
+2024-11-20 18:27:26,131 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_it.h
+2024-11-20 18:27:26,142 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c_save
+2024-11-20 18:27:26,193 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\stm32f4xx_hal_msp.c
+2024-11-20 18:27:26,197 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp_save
+2024-11-20 18:27:26,228 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\MXTmpFiles\system.tmp
+2024-11-20 18:27:26,237 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h_save
+2024-11-20 18:27:26,274 [INFO] CodeEngine:335 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\stm32f4xx_hal_conf.h
+2024-11-20 18:27:26,291 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h_save
+2024-11-20 18:27:26,328 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Inc\main.h
+2024-11-20 18:27:26,333 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c_save
+2024-11-20 18:27:26,387 [INFO] CodeEngine:279 - Generated code: C:\Users\joels\OneDrive\Desktop\String-Drum-Synthesizer\Programs\ECE445-V2\Core\Src\main.c
+2024-11-20 18:27:26,614 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 151mS.
+2024-11-20 18:27:26,616 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-20 18:27:26,651 [INFO] ConfigFileManager:1531 - The Die is : DIE433
+2024-11-20 18:27:27,116 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 500mS.
+2024-11-20 18:27:27,116 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 18:27:27,118 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 22:23:01,002 [INFO] WebApp:189 - Connection lost
+2024-11-20 22:23:22,989 [INFO] WebApp:186 - Connection restablished
+2024-11-20 22:23:23,579 [INFO] WebApp:189 - Connection lost
+2024-11-20 22:23:23,690 [INFO] WebApp:186 - Connection restablished
+2024-11-20 22:23:26,684 [INFO] WebApp:189 - Connection lost
+2024-11-20 22:23:26,825 [INFO] WebApp:186 - Connection restablished
+2024-11-20 22:24:30,678 [INFO] WebApp:189 - Connection lost
+2024-11-20 22:24:30,855 [INFO] WebApp:186 - Connection restablished
+2024-11-20 22:50:02,689 [INFO] WebApp:189 - Connection lost
+2024-11-20 22:50:02,861 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:19:59,676 [INFO] WebApp:189 - Connection lost
+2024-11-20 23:19:59,821 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:20:02,284 [INFO] WebApp:189 - Connection lost
+2024-11-20 23:20:02,403 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:20:21,984 [INFO] WebApp:189 - Connection lost
+2024-11-20 23:20:22,093 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:21:09,404 [INFO] WebApp:189 - Connection lost
+2024-11-20 23:21:09,534 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:21:12,674 [INFO] WebApp:189 - Connection lost
+2024-11-20 23:21:12,848 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:21:26,675 [INFO] WebApp:189 - Connection lost
+2024-11-20 23:21:26,781 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:22:26,181 [INFO] WebApp:189 - Connection lost
+2024-11-20 23:22:26,367 [INFO] WebApp:186 - Connection restablished
+2024-11-20 23:22:55,539 [INFO] MainUpdater:2873 - connection check result : 10
+2024-11-20 23:22:55,539 [INFO] MainUpdater:2873 - connection check result : 10
+2024-11-20 23:22:55,608 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 23:22:55,608 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 23:22:55,608 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 23:22:55,612 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-11-20 23:22:55,612 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.121
+2024-11-20 23:22:55,625 [ERROR] ProjectManagerView:394 - 
+java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$10.caretUpdate(ProjectChoiceTab.java:2622) ~[filemanager.jar:?]
+	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:412) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4491) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4513) ~[?:?]
+	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:842) ~[?:?]
+	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1313) ~[?:?]
+	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1212) ~[?:?]
+	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1193) ~[?:?]
+	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1789) ~[?:?]
+	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:226) ~[?:?]
+	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:780) ~[?:?]
+	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:739) ~[?:?]
+	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
+	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:698) ~[?:?]
+	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1729) ~[?:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:972) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3597) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1940) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:550) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:245) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:391) ~[filemanager.jar:?]
+	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
+	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:900) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:781) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:265) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:352) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:330) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:246) ~[filemanager.jar:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1198) ~[com.st.stm32cube.common.mx_6.12.1.202409122256/:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1068) ~[com.st.stm32cube.common.mx_6.12.1.202409122256/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.12.1.202409122256/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.12.1.202409122256/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.12.1.202409122256/:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+2024-11-20 23:22:55,627 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2024-11-20 23:22:55,627 [INFO] ThirdParty:873 - entering critical section [close project]
+2024-11-20 23:22:55,627 [INFO] ThirdParty:883 - exiting critical section [close project]
+2024-11-20 23:22:55,628 [INFO] PinOutPanel:1561 - setPackage(No Configuration,No Configuration)
+2024-11-20 23:22:55,638 [WARN] IpParametersView:151 - Warning: This peripheral hasn't parameters
+2024-11-20 23:22:55,645 [WARN] MainPanel:284 - <html><b><center>Warning: This peripheral has no parameters to be configured<br></b></html>
+2024-11-20 23:22:55,652 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 574167592 Bytes (1073741824)
+2024-11-20 23:22:55,653 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-11-20 23:22:55,653 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.121
+2024-11-20 23:22:55,653 [INFO] OpenFileManager:332 - Change cursor
+2024-11-20 23:22:55,670 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2024-11-20 23:22:55,674 [INFO] Mcu:2032 - Initializing MCU STM32F401R(D-E)Tx STM32F401RETx STM32F401RET6
+2024-11-20 23:22:56,690 [INFO] Context:742 - Trying to add GPIOservice into a context  which must be forbidden
+2024-11-20 23:22:57,010 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2024-11-20 23:22:57,010 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2024-11-20 23:22:57,010 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2024-11-20 23:22:57,011 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2024-11-20 23:22:57,011 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2024-11-20 23:22:57,019 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,019 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,019 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,019 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,019 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-11-20 23:22:57,020 [WARN] ModelPack:524 - Component already loaded: STMicroelectronics:HAL Drivers:0.0.0:STMicroelectronics:Device:STMicro_Driver:XSPI:HAL::0.0.1:HAL_XSPI
+2024-11-20 23:22:57,044 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-11-20 23:22:57,417 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Channel) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,431 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (DMA) : Parameter (FIFOMode) has Id (SPI2_TX) currently not set
+2024-11-20 23:22:57,432 [INFO] ImportTextPane:205 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (4000000)
+2024-11-20 23:22:57,771 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 426341104 Bytes (1073741824)
+2024-11-20 23:22:57,841 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2024-11-20 23:22:57,841 [INFO] ThirdParty:835 - entering critical section [change project]
+2024-11-20 23:22:57,841 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2024-11-20 23:22:57,841 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.3.0
+2024-11-20 23:22:57,841 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC9 1.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.1
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 1.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.2.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-IPS 3.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 7.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STBOX1 2.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.2.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :EmbeddedOffice I-CUBE-FS-RTOS 1.0.1
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Cesanta I-CUBE-Mongoose 7.13.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :RealThread X-CUBE-RT-Thread_Nano 4.1.1
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC10 1.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :quantropi X-CUBE-qispace-sdk-base 1.9.3
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.2
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.7.4
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.9.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.1
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfTPM 3.4.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2024-11-20 23:22:57,842 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfMQTT 1.19.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.2
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 9.1.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.6.1
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2024-11-20 23:22:57,843 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSH 1.4.17
+2024-11-20 23:22:57,843 [INFO] ThirdParty:841 - exiting critical section [change project]
+2024-11-20 23:22:57,977 [INFO] PinOutPanel:1561 - setPackage(No Configuration,No Configuration)
+2024-11-20 23:22:57,978 [INFO] PinOutPanel:1561 - setPackage(STM32F401RETx,LQFP64)
+2024-11-20 23:22:58,152 [INFO] UtilMem:75 - Before build in PCC Used Memory: 421485032 Bytes (1073741824)
+2024-11-20 23:22:58,370 [INFO] UtilMem:75 - After build in PCC Used Memory: 466051560 Bytes (1073741824)
+2024-11-20 23:22:58,395 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,395 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,395 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,395 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,395 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,395 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,396 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,396 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,396 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,396 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,396 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,396 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,396 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,397 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,397 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,397 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,397 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,398 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,398 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,398 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,398 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,398 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,399 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,399 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,399 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,400 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,400 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,400 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,401 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,401 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,401 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,401 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,402 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,402 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,402 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,403 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,404 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,404 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-20 23:22:58,409 [INFO] ApiDbMcu:508 - Load IP Config File for PDM2PCM
+2024-11-20 23:22:58,411 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 23:22:58,411 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 23:22:58,411 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 23:22:58,445 [INFO] CADModel:165 - CPN selected for project levelSTM32F401RET6
+2024-11-20 23:22:58,445 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-20 23:22:58,516 [INFO] OpenFileManager:363 - Restore cursor
+2024-11-20 23:33:39,293 [INFO] I2sManager:658 - 9.7E7
+2024-11-20 23:33:39,294 [INFO] I2sManager:195 - I2S Clock Value : 9.7E7
+2024-11-20 23:33:39,294 [INFO] I2sManager:553 - AudioClock : 48115Divider : 31Odd : 1
+2024-11-20 23:33:39,322 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
