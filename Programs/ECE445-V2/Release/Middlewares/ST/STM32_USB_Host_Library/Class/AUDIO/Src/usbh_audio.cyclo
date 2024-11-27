@@ -1,0 +1,17 @@
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:733:27:USBH_AUDIO_SOFProcess	1
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:997:17:USBH_AUDIO_FindLinkedUnit	10
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:337:27:USBH_AUDIO_InterfaceDeInit	5
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:2071:27:USBH_AUDIO_SetControlAttribute	7
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:378:27:USBH_AUDIO_ClassRequest	30
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:191:27:USBH_AUDIO_InterfaceInit	63
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:1851:20:USBH_AUDIO_SetFrequency	8
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:1918:20:USBH_AUDIO_Play	3
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:1968:20:USBH_AUDIO_Suspend	3
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:1955:20:USBH_AUDIO_Stop	1
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:1992:20:USBH_AUDIO_Resume	3
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:2015:9:USBH_AUDIO_GetOutOffset	3
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:2038:20:USBH_AUDIO_ChangeOutBuffer	5
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:2135:20:USBH_AUDIO_SetVolume	4
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:2184:13:USBH_AUDIO_FrequencySet	1
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:2195:13:USBH_AUDIO_BufferEmptyCallback	1
+../Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src/usbh_audio.c:709:27:USBH_AUDIO_Process	26

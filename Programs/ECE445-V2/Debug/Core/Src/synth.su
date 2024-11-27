@@ -1,0 +1,2 @@
+../Core/Src/synth.c:12:6:note_off	16	static
+../Core/Src/synth.c:18:6:note_on	16	static

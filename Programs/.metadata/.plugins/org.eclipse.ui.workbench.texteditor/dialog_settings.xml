@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="HAL_ADC_Poll"/>
+		<item key="selection" value="USBH_LL_GetURBState"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="HAL_ADC_Poll"/>
-			<item value="HAL_ADC"/>
+			<item value="USBH_LL_GetURBState"/>
+			<item value="URB"/>
+			<item value="USBH_Get_DevDesc"/>
+			<item value="Enumeration Not Done"/>
+			<item value="USBH_UsrLog"/>
+			<item value="phost-&gt;RequestState"/>
+			<item value="phost-&gt;pClass"/>
+			<item value="USBH_HandleTypeDef"/>
+			<item value="USBH_Process"/>
+			<item value="MIDI_Class"/>
+			<item value="USBH_LL_Start"/>
+			<item value="usb_host"/>
+			<item value="MX_USB_HOST_Process"/>
+			<item value="MX_Host"/>
+			<item value="HAL_I2S_TxCpltCallback"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="973"/>
-		<item key="DIALOG_Y_ORIGIN" value="144"/>
+		<item key="DIALOG_X_ORIGIN" value="34"/>
+		<item key="DIALOG_Y_ORIGIN" value="273"/>
 		<item key="DIALOG_WIDTH" value="364"/>
 		<item key="DIALOG_HEIGHT" value="370"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
