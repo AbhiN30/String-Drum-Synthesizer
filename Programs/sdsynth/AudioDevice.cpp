@@ -13,6 +13,10 @@
 
 std::mutex dataMutex; // Protect access to `dataPtr`
 
+inline int clamp(int value, int min, int max) {
+    return (value < min) ? min : (value > max) ? max : value;
+}
+
 AudioDevice::AudioDevice()
     : isPlaying{false}
     , isHDMIConnected{false}
