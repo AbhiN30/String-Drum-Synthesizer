@@ -190,14 +190,15 @@ void AudioDevice::renderWaveform() {
                 int x2 = ((i + 1) + offset) % WINDOW_WIDTH;
 
                 // Map audio data to the y-axis: scale amplitude from [-32768, 32767] to screen height
-                int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
-                int y2 = ((dataPtr[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
+                // We use the formula to ensure we get a vertical position that fluctuates over time.
+                int y1 = (dataPtr[i] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
+                int y2 = (dataPtr[i + 1] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
 
                 // Ensure the coordinates are within the window bounds
-                x1 = clamp(x1, 0, WINDOW_WIDTH - 1);
-                y1 = clamp(y1, 0, WINDOW_HEIGHT - 1);
-                x2 = clamp(x2, 0, WINDOW_WIDTH - 1);
-                y2 = clamp(y2, 0, WINDOW_HEIGHT - 1);
+                x1 = std::clamp(x1, 0, WINDOW_WIDTH - 1);
+                y1 = std::clamp(y1, 0, WINDOW_HEIGHT - 1);
+                x2 = std::clamp(x2, 0, WINDOW_WIDTH - 1);
+                y2 = std::clamp(y2, 0, WINDOW_HEIGHT - 1);
 
                 // Draw the line (creating the waveform)
                 SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
