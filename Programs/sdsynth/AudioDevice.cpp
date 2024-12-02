@@ -171,7 +171,7 @@ void AudioDevice::renderWaveform() {
     }
 
     // Variables for scrolling
-    int offset = 0;
+    float offset = 0; // Use a float for more continuous scrolling
 
     // Main render loop
     while (isHDMIConnected && isPlaying) {
@@ -185,12 +185,11 @@ void AudioDevice::renderWaveform() {
 
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
-                // Calculate the x-coordinates based on the sample index and the offset for scrolling
-                int x1 = (i + offset) % WINDOW_WIDTH;  // Wrap around to create continuous scrolling
-                int x2 = ((i + 1) + offset) % WINDOW_WIDTH;
+                // Calculate the x-coordinates based on the sample index and offset for scrolling
+                int x1 = (int)((i + offset) * (WINDOW_WIDTH / (float)period_size)) % WINDOW_WIDTH;  // Adjust x to reflect sample rate
+                int x2 = (int)((i + 1 + offset) * (WINDOW_WIDTH / (float)period_size)) % WINDOW_WIDTH;
 
                 // Map audio data to the y-axis: scale amplitude from [-32768, 32767] to screen height
-                // We use the formula to ensure we get a vertical position that fluctuates over time.
                 int y1 = (dataPtr[i] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
                 int y2 = (dataPtr[i + 1] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
 
@@ -209,9 +208,10 @@ void AudioDevice::renderWaveform() {
         SDL_RenderPresent(renderer);
 
         // Scroll the waveform by shifting the offset
-        offset -= 1; // Move the drawing to the left
-        if (offset <= -WINDOW_WIDTH) {
-            offset = 0; // Reset when fully scrolled
+        offset -= 0.1f; // Use a smaller fractional step for smoother scrolling
+
+        if (offset <= -period_size) {  // Reset offset after one full period
+            offset = 0;
         }
 
         SDL_Delay(16); // ~60 FPS
