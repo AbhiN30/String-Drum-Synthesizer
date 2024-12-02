@@ -185,12 +185,16 @@ void AudioDevice::renderWaveform() {
 
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
-                // Map the sample index to the x-coordinate
-                // Ensure we have enough resolution to fill the width of the window
-                int x1 = (i + offset) % WINDOW_WIDTH;
-                int x2 = ((i + 1) + offset) % WINDOW_WIDTH;
+                // Map the sample index to the x-coordinate based on 48kHz sample rate
+                // Assuming `i` is the index of each sample in `dataPtr`
+                float time = static_cast<float>(i) / 48000.0f; // Time in seconds for each sample
+
+                // Scale the time to fit within the window width
+                int x1 = static_cast<int>(time * WINDOW_WIDTH);
+                int x2 = static_cast<int>((time + 1.0f / 48000.0f) * WINDOW_WIDTH); // For the next point
 
                 // Map audio data to the y-axis (amplitude scaling)
+                // The data values range from -32768 to 32767; scale them to fit in the window height
                 int y1 = (dataPtr[i] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
                 int y2 = (dataPtr[i + 1] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
 
@@ -221,4 +225,3 @@ void AudioDevice::renderWaveform() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
-
