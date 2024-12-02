@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <string.h>
 #include <math.h>
-#include <wiringPi.h>
 #include "rtmidi/RtMidi.h"
 #include "AudioDevice.h"
 
@@ -54,11 +53,14 @@ RtMidiIn* connectToMidiDevice() {
  
 int main()
 {
-    if (audio_device.initiallize() < 0) {
-        return -1;
-    }
+    // if (audio_device.initiallize() < 0) {
+    //     return -1;
+    // }
 
-    audio_device.play();
+    // audio_device.play();
+
+
+
 	// RtMidiIn* midi = connectToMidiDevice();
 	// if (!midi) {
 	// 	return -1;
