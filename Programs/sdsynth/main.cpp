@@ -53,7 +53,7 @@ RtMidiIn* connectToMidiDevice() {
  
 int main()
 {
-    if (audio_device.initiallize() < 0) {
+    if (audio_device.initialize() < 0) {
          return -1;
     }
 
