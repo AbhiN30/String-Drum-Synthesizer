@@ -171,7 +171,7 @@ void AudioDevice::renderWaveform() {
     }
 
     // Variables for scrolling
-    float offset = 0; // Use a float for more continuous scrolling
+    int offset = 0;
 
     // Main render loop
     while (isHDMIConnected && isPlaying) {
@@ -185,11 +185,12 @@ void AudioDevice::renderWaveform() {
 
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
-                // Calculate the x-coordinates based on the sample index and offset for scrolling
-                int x1 = (int)((i + offset) * (WINDOW_WIDTH / (float)period_size)) % WINDOW_WIDTH;  // Adjust x to reflect sample rate
-                int x2 = (int)((i + 1 + offset) * (WINDOW_WIDTH / (float)period_size)) % WINDOW_WIDTH;
+                // Map the sample index to the x-coordinate
+                // Ensure we have enough resolution to fill the width of the window
+                int x1 = (i + offset) % WINDOW_WIDTH;
+                int x2 = ((i + 1) + offset) % WINDOW_WIDTH;
 
-                // Map audio data to the y-axis: scale amplitude from [-32768, 32767] to screen height
+                // Map audio data to the y-axis (amplitude scaling)
                 int y1 = (dataPtr[i] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
                 int y2 = (dataPtr[i + 1] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
 
@@ -199,7 +200,7 @@ void AudioDevice::renderWaveform() {
                 x2 = clamp(x2, 0, WINDOW_WIDTH - 1);
                 y2 = clamp(y2, 0, WINDOW_HEIGHT - 1);
 
-                // Draw the line (creating the waveform)
+                // Draw a line (creating the waveform)
                 SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
             }
         }
@@ -208,10 +209,9 @@ void AudioDevice::renderWaveform() {
         SDL_RenderPresent(renderer);
 
         // Scroll the waveform by shifting the offset
-        offset -= 0.1f; // Use a smaller fractional step for smoother scrolling
-
-        if (offset <= -period_size) {  // Reset offset after one full period
-            offset = 0;
+        offset -= 1; // Move the drawing to the left
+        if (offset <= -WINDOW_WIDTH) {
+            offset = 0; // Reset when fully scrolled
         }
 
         SDL_Delay(16); // ~60 FPS
@@ -221,3 +221,4 @@ void AudioDevice::renderWaveform() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
+
