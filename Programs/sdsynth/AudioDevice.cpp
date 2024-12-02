@@ -187,7 +187,7 @@ void AudioDevice::renderWaveform() {
                 float time = (static_cast<float>(x) / WINDOW_WIDTH)*period_size; // Time in seconds for each sample
 
                 // Map audio data to the y-axis (amplitude scaling)
-                int y = (dataPtr[static_cast<int>time] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
+                int y = (dataPtr[static_cast<int>(time)] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
 
                 // Ensure the coordinates are within the window bounds
                 x = clamp(x, 0, WINDOW_WIDTH - 1);
