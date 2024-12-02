@@ -170,13 +170,10 @@ void AudioDevice::renderWaveform() {
         return;
     }
 
-    stopVisualization = false; // Reset stop signal
-    std::thread commandThread(&AudioDevice::monitorTerminalCommands, this);
-
     // Used to scroll the waveform horizontally
     int offset = 0;
 
-    while (isHDMIConnected && isPlaying && !stopVisualization) {
+    while (isHDMIConnected && isPlaying) {
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
         SDL_RenderClear(renderer);
 
@@ -187,7 +184,7 @@ void AudioDevice::renderWaveform() {
 
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
-                // Calculate x and y coordinates
+                // Calculate x and y coordinates, adjusted by offset for scrolling
                 int x1 = offset + i * (WINDOW_WIDTH / period_size);
                 int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
                 int x2 = offset + (i + 1) * (WINDOW_WIDTH / period_size);
@@ -199,6 +196,7 @@ void AudioDevice::renderWaveform() {
                 x2 = (x2 < 0) ? 0 : (x2 >= WINDOW_WIDTH) ? WINDOW_WIDTH - 1 : x2;
                 y2 = (y2 < 0) ? 0 : (y2 >= WINDOW_HEIGHT) ? WINDOW_HEIGHT - 1 : y2;
 
+                // Draw the line between the points
                 SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
             }
         }
@@ -215,9 +213,9 @@ void AudioDevice::renderWaveform() {
         SDL_Delay(16); // ~60 FPS
     }
 
-    commandThread.join();
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
+
 
