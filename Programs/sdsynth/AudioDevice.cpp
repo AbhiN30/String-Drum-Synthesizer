@@ -11,21 +11,19 @@
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 400
 
-AudioDevice::AudioDevice() 
+std::mutex dataMutex; // Protect access to `dataPtr`
+
+AudioDevice::AudioDevice()
     : isPlaying{false}
     , isHDMIConnected{false}
     , data(period_size << 1) 
-    , synth(target_sample_rate) {
-    dataPtr = &data.data()[0];
-}
-
+    , dataPtr{&data.data()[0]} {}
 
 AudioDevice::~AudioDevice() {
     stop();
-    // TODO: more cleanup needed
 }
 
-int AudioDevice::initiallize() {
+int AudioDevice::initialize() {
     snd_pcm_hw_params_alloca(&hwparams);
 
     if (snd_pcm_open(&pcm_handle, AUDIO_HARDWARE_NAME, stream, 0) < 0) {
@@ -33,58 +31,49 @@ int AudioDevice::initiallize() {
         return -1;
     }
 
-    /* Init hwparams with full configuration space */
     if (snd_pcm_hw_params_any(pcm_handle, hwparams) < 0) {
-        fprintf(stderr, "Can not configure this PCM device.\n");
+        fprintf(stderr, "Cannot configure this PCM device.\n");
         return -1;
     }
 
     if (snd_pcm_hw_params_set_access(pcm_handle, hwparams, SND_PCM_ACCESS_RW_INTERLEAVED) < 0) {
         fprintf(stderr, "Error setting access.\n");
-        return(-1);
-    }
-  
-    /* Set sample format */
-    if (snd_pcm_hw_params_set_format(pcm_handle, hwparams, SND_PCM_FORMAT_S16_LE) < 0) {
-        fprintf(stderr, "Error setting format.\n");
-        return(-1);
+        return -1;
     }
 
-    /* Set sample rate. If the exact rate is not supported */
-    /* by the hardware, use nearest possible rate.         */ 
+    if (snd_pcm_hw_params_set_format(pcm_handle, hwparams, SND_PCM_FORMAT_S16_LE) < 0) {
+        fprintf(stderr, "Error setting format.\n");
+        return -1;
+    }
+
     exact_sample_rate = target_sample_rate;
     if (snd_pcm_hw_params_set_rate_near(pcm_handle, hwparams, &exact_sample_rate, 0) < 0) {
         fprintf(stderr, "Error setting rate.\n");
-        return(-1);
-    }
-    if (target_sample_rate != exact_sample_rate) {
-        fprintf(stderr, "The rate %d Hz is not supported by your hardware.\n ==> Using %d Hz instead.\n", target_sample_rate, exact_sample_rate);
+        return -1;
     }
 
-    /* Set number of channels */
+    if (target_sample_rate != exact_sample_rate) {
+        fprintf(stderr, "The rate %d Hz is not supported by your hardware. Using %d Hz instead.\n", target_sample_rate, exact_sample_rate);
+    }
+
     if (snd_pcm_hw_params_set_channels(pcm_handle, hwparams, 2) < 0) {
         fprintf(stderr, "Error setting channels.\n");
-        return(-1);
+        return -1;
     }
 
-    /* Set number of periods. Periods used to be called fragments. */ 
     if (snd_pcm_hw_params_set_periods(pcm_handle, hwparams, periods, 0) < 0) {
         fprintf(stderr, "Error setting periods.\n");
-        return(-1);
+        return -1;
     }
 
-    /* Set buffer size (in frames). The resulting latency is given by */
-    /* latency = period_size * periods / (rate * bytes_per_frame)     */
-    if (snd_pcm_hw_params_set_buffer_size(pcm_handle, hwparams, (period_size * periods)>>2) < 0) {
-        fprintf(stderr, "Error setting buffersize.\n");
-        return(-1);
+    if (snd_pcm_hw_params_set_buffer_size(pcm_handle, hwparams, (period_size * periods) >> 2) < 0) {
+        fprintf(stderr, "Error setting buffer size.\n");
+        return -1;
     }
 
-    /* Apply HW parameter settings to */
-    /* PCM device and prepare device  */
     if (snd_pcm_hw_params(pcm_handle, hwparams) < 0) {
         fprintf(stderr, "Error setting HW params.\n");
-        return(-1);
+        return -1;
     }
 
     return 0;
@@ -94,7 +83,7 @@ void AudioDevice::play() {
     isPlaying = true;
     isHDMIConnected = false;
     startVisualizationThread();
-    startAudioThread(); // no real thread created right now
+    startAudioThread();
 }
 
 void AudioDevice::stop() {
@@ -104,7 +93,8 @@ void AudioDevice::stop() {
 
 void AudioDevice::processBuffer() {
     std::lock_guard<std::mutex> lock(dataMutex);
-    synth.processBuffer(dataPtr, buffer_size);
+    // Simulate audio synthesis
+    std::fill(data.begin(), data.end(), rand() % 32767);
 }
 
 void AudioDevice::startAudioThread() {
@@ -118,7 +108,7 @@ void AudioDevice::startAudioThread() {
             snd_pcm_prepare(pcm_handle);
             fprintf(stderr, "<<<<<<<<<<<<<<< Buffer Underrun >>>>>>>>>>>>>>>\n");
         }
-        dataPtr = (half_cycle) ? &data.data()[0] : &data.data()[period_size];
+        dataPtr = half_cycle ? &data.data()[0] : &data.data()[period_size];
         half_cycle = !half_cycle;
     }
 }
