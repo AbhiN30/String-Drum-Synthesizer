@@ -170,42 +170,37 @@ void AudioDevice::renderWaveform() {
         return;
     }
 
+    // Set the background color to black (no clear screen on every frame)
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Black color for background
+
     // Variables for scrolling
     int offset = 0;
 
     // Main render loop
     while (isHDMIConnected && isPlaying) {
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
-        SDL_RenderClear(renderer);
-
+        // Draw waveform
         SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Set waveform color (green)
 
         {
             std::lock_guard<std::mutex> lock(dataMutex);
 
             // Loop through audio data and draw the waveform
-            for (size_t i = 0; i < period_size - 1; ++i) {
+            for (size_t i = 0; i < period_size; ++i) {
                 // Map the sample index to the x-coordinate based on 48kHz sample rate
-                // Assuming `i` is the index of each sample in `dataPtr`
                 float time = static_cast<float>(i) / 48000.0f; // Time in seconds for each sample
 
                 // Scale the time to fit within the window width
-                int x1 = static_cast<int>(time * WINDOW_WIDTH);
-                int x2 = static_cast<int>((time + 1.0f / 48000.0f) * WINDOW_WIDTH); // For the next point
+                int x = static_cast<int>(time * WINDOW_WIDTH);
 
                 // Map audio data to the y-axis (amplitude scaling)
-                // The data values range from -32768 to 32767; scale them to fit in the window height
-                int y1 = (dataPtr[i] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
-                int y2 = (dataPtr[i + 1] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
+                int y = (dataPtr[i] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
 
                 // Ensure the coordinates are within the window bounds
-                x1 = clamp(x1, 0, WINDOW_WIDTH - 1);
-                y1 = clamp(y1, 0, WINDOW_HEIGHT - 1);
-                x2 = clamp(x2, 0, WINDOW_WIDTH - 1);
-                y2 = clamp(y2, 0, WINDOW_HEIGHT - 1);
+                x = clamp(x, 0, WINDOW_WIDTH - 1);
+                y = clamp(y, 0, WINDOW_HEIGHT - 1);
 
-                // Draw a line (creating the waveform)
-                SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+                // Draw a single point at (x, y) to represent the waveform
+                SDL_RenderDrawPoint(renderer, x, y);
             }
         }
 
@@ -225,3 +220,4 @@ void AudioDevice::renderWaveform() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
+
