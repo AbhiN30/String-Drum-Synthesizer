@@ -20,11 +20,18 @@ public:
 
 private:
     void startAudioThread();
+    void startVisualizationThread();
+    void detectHDMIAndRender();
+    void renderWaveform();
 
 private:
     snd_pcm_t *pcm_handle;
     snd_pcm_stream_t stream = SND_PCM_STREAM_PLAYBACK;
     snd_pcm_hw_params_t *hwparams;
+
+    std::atomic<bool> isPlaying;
+    std::atomic<bool> isHDMIConnected;
+    std::thread visualizationThread;
 
     const unsigned int target_sample_rate = 48000; /* Sample rate */
     unsigned int exact_sample_rate;   /* Sample rate returned by */

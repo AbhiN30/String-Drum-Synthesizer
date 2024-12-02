@@ -1,9 +1,19 @@
 #include "AudioDevice.h"
+#include <SDL2/SDL.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <unistd.h>
+#include <chrono>
+#include <mutex>
 
 #define AUDIO_HARDWARE_NAME "plughw:CARD=KTUSBAUDIO"
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT 400
 
 AudioDevice::AudioDevice() 
     : isPlaying{false}
+    , isHDMIConnected{false}
     , data(period_size << 1) 
     , synth(target_sample_rate) {
     dataPtr = &data.data()[0];
@@ -82,6 +92,8 @@ int AudioDevice::initiallize() {
 
 void AudioDevice::play() {
     isPlaying = true;
+    isHDMIConnected = false;
+    startVisualizationThread();
     startAudioThread(); // no real thread created right now
 }
 
@@ -91,6 +103,7 @@ void AudioDevice::stop() {
 }
 
 void AudioDevice::processBuffer() {
+    std::lock_guard<std::mutex> lock(dataMutex);
     synth.processBuffer(dataPtr, buffer_size);
 }
 
@@ -108,4 +121,80 @@ void AudioDevice::startAudioThread() {
         dataPtr = (half_cycle) ? &data.data()[0] : &data.data()[period_size];
         half_cycle = !half_cycle;
     }
+}
+
+void AudioDevice::startVisualizationThread() {
+    visualizationThread = std::thread(&AudioDevice::detectHDMIAndRender, this);
+    visualizationThread.detach();
+}
+
+void AudioDevice::detectHDMIAndRender() {
+    while (!isPlaying) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    }
+
+    while (true) {
+        FILE* pipe = popen("vcgencmd display_power | grep 'display_power=1'", "r");
+        char buffer[128];
+        if (pipe) {
+            fgets(buffer, sizeof(buffer), pipe);
+            pclose(pipe);
+            isHDMIConnected = (strstr(buffer, "display_power=1") != nullptr);
+        }
+
+        if (isHDMIConnected) {
+            renderWaveform();
+        } else {
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+    }
+}
+
+void AudioDevice::renderWaveform() {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        fprintf(stderr, "SDL could not initialize: %s\n", SDL_GetError());
+        return;
+    }
+
+    SDL_Window* window = SDL_CreateWindow("Waveform Visualization",
+        SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+        WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
+
+    if (!window) {
+        fprintf(stderr, "Window could not be created: %s\n", SDL_GetError());
+        SDL_Quit();
+        return;
+    }
+
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    if (!renderer) {
+        fprintf(stderr, "Renderer could not be created: %s\n", SDL_GetError());
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        return;
+    }
+
+    while (isHDMIConnected && isPlaying) {
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_RenderClear(renderer);
+
+        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+        std::lock_guard<std::mutex> lock(dataMutex);
+
+        for (size_t i = 0; i < period_size - 1; ++i) {
+            int x1 = i * (WINDOW_WIDTH / period_size);
+            int y1 = (data[i] / 32768.0) * (WINDOW_HEIGHT / 2) + (WINDOW_HEIGHT / 2);
+            int x2 = (i + 1) * (WINDOW_WIDTH / period_size);
+            int y2 = (data[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2) + (WINDOW_HEIGHT / 2);
+
+            SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+        }
+
+        SDL_RenderPresent(renderer);
+        SDL_Delay(16); // ~60 FPS
+    }
+
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
 }
