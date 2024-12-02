@@ -6,7 +6,7 @@ EmotiveKnob::EmotiveKnob(const int _id)
 
 EmotiveKnob::~EmotiveKnob() {}
 
-short EmotiveKnob::readValue() {
+unsigned char EmotiveKnob::readValue() {
     // gpio select using id
     // read bits
     return 0;

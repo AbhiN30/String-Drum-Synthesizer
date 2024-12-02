@@ -17,7 +17,9 @@ AudioDevice::AudioDevice()
     : isPlaying{false}
     , isHDMIConnected{false}
     , data(period_size << 1) 
-    , dataPtr{&data.data()[0]} {}
+    , synth(target_sample_rate) {
+    dataPtr = data.data()[0];
+    }
 
 AudioDevice::~AudioDevice() {
     stop();
