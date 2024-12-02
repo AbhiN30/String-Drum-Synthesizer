@@ -185,15 +185,15 @@ void AudioDevice::renderWaveform() {
 
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
-                // Map data to screen coordinates:
-                // x = (i + offset) to create horizontal scroll
-                // y = amplitude (scaled to fit the screen height)
+                // Calculate the x-coordinates based on the sample index and the offset for scrolling
                 int x1 = (i + offset) % WINDOW_WIDTH;  // Wrap around to create continuous scrolling
-                int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
                 int x2 = ((i + 1) + offset) % WINDOW_WIDTH;
+
+                // Map audio data to the y-axis: scale amplitude from [-32768, 32767] to screen height
+                int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
                 int y2 = ((dataPtr[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
 
-                // Ensure that the waveform points are within the bounds
+                // Ensure the coordinates are within the window bounds
                 x1 = clamp(x1, 0, WINDOW_WIDTH - 1);
                 y1 = clamp(y1, 0, WINDOW_HEIGHT - 1);
                 x2 = clamp(x2, 0, WINDOW_WIDTH - 1);
