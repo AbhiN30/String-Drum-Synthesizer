@@ -167,19 +167,29 @@ void AudioDevice::renderWaveform() {
     }
 
     while (isHDMIConnected && isPlaying) {
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
         SDL_RenderClear(renderer);
 
-        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
-        std::lock_guard<std::mutex> lock(dataMutex);
+        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Set waveform color (green)
 
-        for (size_t i = 0; i < period_size - 1; ++i) {
-            int x1 = i * (WINDOW_WIDTH / period_size);
-            int y1 = (data[i] / 32768.0) * (WINDOW_HEIGHT / 2) + (WINDOW_HEIGHT / 2);
-            int x2 = (i + 1) * (WINDOW_WIDTH / period_size);
-            int y2 = (data[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2) + (WINDOW_HEIGHT / 2);
+        {
+            std::lock_guard<std::mutex> lock(dataMutex);
 
-            SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+            for (size_t i = 0; i < period_size - 1; ++i) {
+                // Calculate x and y coordinates
+                int x1 = i * (WINDOW_WIDTH / period_size);
+                int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
+                int x2 = (i + 1) * (WINDOW_WIDTH / period_size);
+                int y2 = ((dataPtr[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
+
+                // Ensure coordinates are within bounds
+                x1 = std::clamp(x1, 0, WINDOW_WIDTH - 1);
+                y1 = std::clamp(y1, 0, WINDOW_HEIGHT - 1);
+                x2 = std::clamp(x2, 0, WINDOW_WIDTH - 1);
+                y2 = std::clamp(y2, 0, WINDOW_HEIGHT - 1);
+
+                SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+            }
         }
 
         SDL_RenderPresent(renderer);
@@ -190,3 +200,4 @@ void AudioDevice::renderWaveform() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
+
