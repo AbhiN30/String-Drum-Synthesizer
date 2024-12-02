@@ -68,5 +68,6 @@
         "xtr1common": "cpp",
         "xtree": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/joels/OneDrive/Desktop/String-Drum-Synthesizer/Programs/sdsynth/Libraries/rtmidi-6.0.0"
 }

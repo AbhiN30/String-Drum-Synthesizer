@@ -1,12 +1,14 @@
-// cmidi.cpp
- 
 #include <iostream>
 #include <cstdlib>
 #include <string.h>
+#include <math.h>
+#include <wiringPi.h>
 #include "rtmidi/RtMidi.h"
+#include "AudioDevice.h"
+
+AudioDevice audio_device;
  
-void HandleMidiMessage( double deltatime, std::vector< unsigned char > *message, void *userData )
-{
+void HandleMidiMessage(double deltatime, std::vector< unsigned char > *message, void *userData) {
 	unsigned int nBytes = message->size();
 	for ( unsigned int i=0; i<nBytes; i++ )
 		std::cout << "Byte " << i << " = " << (int)message->at(i) << ", ";
@@ -52,17 +54,22 @@ RtMidiIn* connectToMidiDevice() {
  
 int main()
 {
-	RtMidiIn* midi = connectToMidiDevice();
-	if (!midi) {
-		return -1;
-	}
+    if (audio_device.initiallize() < 0) {
+        return -1;
+    }
 
-	std::cout << "\nReading MIDI input ... press <enter> to quit.\n";
-	char input;
-	std::cin.get(input);
+    audio_device.play();
+	// RtMidiIn* midi = connectToMidiDevice();
+	// if (!midi) {
+	// 	return -1;
+	// }
 
-	// Clean up
-	delete midi;
+	// std::cout << "\nReading MIDI input ... press <enter> to quit.\n";
+	// char input;
+	// std::cin.get(input);
+
+	// // Clean up
+	// delete midi;
 
 	return 0;
 }
