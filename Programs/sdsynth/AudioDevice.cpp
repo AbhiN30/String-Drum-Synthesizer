@@ -194,10 +194,10 @@ void AudioDevice::renderWaveform() {
                 int y2 = ((dataPtr[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
 
                 // Ensure that the waveform points are within the bounds
-                x1 = std::clamp(x1, 0, WINDOW_WIDTH - 1);
-                y1 = std::clamp(y1, 0, WINDOW_HEIGHT - 1);
-                x2 = std::clamp(x2, 0, WINDOW_WIDTH - 1);
-                y2 = std::clamp(y2, 0, WINDOW_HEIGHT - 1);
+                x1 = clamp(x1, 0, WINDOW_WIDTH - 1);
+                y1 = clamp(y1, 0, WINDOW_HEIGHT - 1);
+                x2 = clamp(x2, 0, WINDOW_WIDTH - 1);
+                y2 = clamp(y2, 0, WINDOW_HEIGHT - 1);
 
                 // Draw the line (creating the waveform)
                 SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
