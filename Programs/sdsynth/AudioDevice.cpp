@@ -170,12 +170,13 @@ void AudioDevice::renderWaveform() {
         return;
     }
 
-    // Used to scroll the waveform horizontally
+    // Variables for scrolling
     int offset = 0;
 
+    // Main render loop
     while (isHDMIConnected && isPlaying) {
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
-        SDL_RenderClear(renderer);
+        //SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
+        //SDL_RenderClear(renderer);
 
         SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Set waveform color (green)
 
@@ -184,24 +185,20 @@ void AudioDevice::renderWaveform() {
 
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
-                // Calculate x and y coordinates, adjusted by offset for scrolling
-                int x1 = offset + i * (WINDOW_WIDTH / period_size);
+                // Map data to screen coordinates:
+                // x = (time index + offset) for scrolling
+                // y = amplitude (scaled to fit the screen height)
+                int x1 = (i + offset) % WINDOW_WIDTH;  // Wrap around to create continuous scrolling
                 int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
-                int x2 = offset + (i + 1) * (WINDOW_WIDTH / period_size);
+                int x2 = ((i + 1) + offset) % WINDOW_WIDTH;
                 int y2 = ((dataPtr[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
 
-                // Ensure coordinates are within bounds
-                x1 = (x1 < 0) ? 0 : (x1 >= WINDOW_WIDTH) ? WINDOW_WIDTH - 1 : x1;
-                y1 = (y1 < 0) ? 0 : (y1 >= WINDOW_HEIGHT) ? WINDOW_HEIGHT - 1 : y1;
-                x2 = (x2 < 0) ? 0 : (x2 >= WINDOW_WIDTH) ? WINDOW_WIDTH - 1 : x2;
-                y2 = (y2 < 0) ? 0 : (y2 >= WINDOW_HEIGHT) ? WINDOW_HEIGHT - 1 : y2;
-
-                // Draw the line between the points
+                // Draw the line (creating the waveform)
                 SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
             }
         }
 
-        // Update the screen with the new drawing
+        // Update the screen with the newly drawn waveform
         SDL_RenderPresent(renderer);
 
         // Scroll the waveform by shifting the offset
