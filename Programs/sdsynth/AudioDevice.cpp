@@ -173,9 +173,6 @@ void AudioDevice::renderWaveform() {
     // Set the background color to black (no clear screen on every frame)
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Black color for background
 
-    // Variables for scrolling
-    int offset = 0;
-
     // Main render loop
     while (isHDMIConnected && isPlaying) {
         // Draw waveform
@@ -186,7 +183,7 @@ void AudioDevice::renderWaveform() {
 
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size; ++i) {
-                // Map the sample index to the x-coordinate based on 48kHz sample rate
+                // Calculate time based on sample rate (1/48000 per sample)
                 float time = static_cast<float>(i) / 48000.0f; // Time in seconds for each sample
 
                 // Scale the time to fit within the window width
@@ -207,12 +204,6 @@ void AudioDevice::renderWaveform() {
         // Update the screen with the newly drawn waveform
         SDL_RenderPresent(renderer);
 
-        // Scroll the waveform by shifting the offset
-        offset -= 1; // Move the drawing to the left
-        if (offset <= -WINDOW_WIDTH) {
-            offset = 0; // Reset when fully scrolled
-        }
-
         SDL_Delay(16); // ~60 FPS
     }
 
@@ -220,4 +211,3 @@ void AudioDevice::renderWaveform() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
-
