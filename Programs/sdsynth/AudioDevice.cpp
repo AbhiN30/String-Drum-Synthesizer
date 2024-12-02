@@ -170,7 +170,13 @@ void AudioDevice::renderWaveform() {
         return;
     }
 
-    while (isHDMIConnected && isPlaying) {
+    stopVisualization = false; // Reset stop signal
+    std::thread commandThread(&AudioDevice::monitorTerminalCommands, this);
+
+    // Used to scroll the waveform horizontally
+    int offset = 0;
+
+    while (isHDMIConnected && isPlaying && !stopVisualization) {
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
         SDL_RenderClear(renderer);
 
@@ -179,27 +185,37 @@ void AudioDevice::renderWaveform() {
         {
             std::lock_guard<std::mutex> lock(dataMutex);
 
+            // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
                 // Calculate x and y coordinates
-                int x1 = i * (WINDOW_WIDTH / period_size);
+                int x1 = offset + i * (WINDOW_WIDTH / period_size);
                 int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
-                int x2 = (i + 1) * (WINDOW_WIDTH / period_size);
+                int x2 = offset + (i + 1) * (WINDOW_WIDTH / period_size);
                 int y2 = ((dataPtr[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
 
                 // Ensure coordinates are within bounds
-                x1 = clamp(x1, 0, WINDOW_WIDTH - 1);
-                y1 = clamp(y1, 0, WINDOW_HEIGHT - 1);
-                x2 = clamp(x2, 0, WINDOW_WIDTH - 1);
-                y2 = clamp(y2, 0, WINDOW_HEIGHT - 1);
+                x1 = (x1 < 0) ? 0 : (x1 >= WINDOW_WIDTH) ? WINDOW_WIDTH - 1 : x1;
+                y1 = (y1 < 0) ? 0 : (y1 >= WINDOW_HEIGHT) ? WINDOW_HEIGHT - 1 : y1;
+                x2 = (x2 < 0) ? 0 : (x2 >= WINDOW_WIDTH) ? WINDOW_WIDTH - 1 : x2;
+                y2 = (y2 < 0) ? 0 : (y2 >= WINDOW_HEIGHT) ? WINDOW_HEIGHT - 1 : y2;
 
                 SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
             }
         }
 
+        // Update the screen with the new drawing
         SDL_RenderPresent(renderer);
+
+        // Scroll the waveform by shifting the offset
+        offset -= 1; // Move the drawing to the left
+        if (offset <= -WINDOW_WIDTH) {
+            offset = 0; // Reset when fully scrolled
+        }
+
         SDL_Delay(16); // ~60 FPS
     }
 
+    commandThread.join();
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
