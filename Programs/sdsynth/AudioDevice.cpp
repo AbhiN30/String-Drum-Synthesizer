@@ -175,8 +175,8 @@ void AudioDevice::renderWaveform() {
 
     // Main render loop
     while (isHDMIConnected && isPlaying) {
-        //SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
-        //SDL_RenderClear(renderer);
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Clear screen to black
+        SDL_RenderClear(renderer);
 
         SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Set waveform color (green)
 
@@ -186,12 +186,18 @@ void AudioDevice::renderWaveform() {
             // Loop through audio data and draw the waveform
             for (size_t i = 0; i < period_size - 1; ++i) {
                 // Map data to screen coordinates:
-                // x = (time index + offset) for scrolling
+                // x = (i + offset) to create horizontal scroll
                 // y = amplitude (scaled to fit the screen height)
                 int x1 = (i + offset) % WINDOW_WIDTH;  // Wrap around to create continuous scrolling
                 int y1 = ((dataPtr[i] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
                 int x2 = ((i + 1) + offset) % WINDOW_WIDTH;
                 int y2 = ((dataPtr[i + 1] / 32768.0) * (WINDOW_HEIGHT / 2)) + (WINDOW_HEIGHT / 2);
+
+                // Ensure that the waveform points are within the bounds
+                x1 = std::clamp(x1, 0, WINDOW_WIDTH - 1);
+                y1 = std::clamp(y1, 0, WINDOW_HEIGHT - 1);
+                x2 = std::clamp(x2, 0, WINDOW_WIDTH - 1);
+                y2 = std::clamp(y2, 0, WINDOW_HEIGHT - 1);
 
                 // Draw the line (creating the waveform)
                 SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
@@ -214,5 +220,3 @@ void AudioDevice::renderWaveform() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
-
-
