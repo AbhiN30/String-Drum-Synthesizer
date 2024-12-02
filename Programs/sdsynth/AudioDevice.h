@@ -43,7 +43,7 @@ private:
               //                exact_rate < rate  --> dir = -1
               //                exact_rate > rate  --> dir = 1
     const int periods = 2;               // Number of periods
-    snd_pcm_uframes_t period_size = 256; // Period size in frames
+    snd_pcm_uframes_t period_size = 1024; // Period size in frames
     const int buffer_size = period_size >> 2; // Buffer size in frames
 
     std::vector<short> data; // Audio data buffer
