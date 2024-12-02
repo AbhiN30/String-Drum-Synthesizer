@@ -1,2 +1,2 @@
 all:
-	g++ *.cpp -o synth -lrtmidi -lpthread -lwiringPi -lasound
+	g++ *.cpp -o synth -lrtmidi -lpthread -lwiringPi -lasound -lSDL2
