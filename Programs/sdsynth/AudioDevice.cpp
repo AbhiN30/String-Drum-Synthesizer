@@ -7,7 +7,7 @@
 #include <chrono>
 #include <mutex>
 
-#define AUDIO_HARDWARE_NAME "plughw:CARD=KTUSBAUDIO"
+#define AUDIO_HARDWARE_NAME "hw:CARD=Headphones"
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 400
 
