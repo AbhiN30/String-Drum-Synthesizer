@@ -182,15 +182,12 @@ void AudioDevice::renderWaveform() {
             std::lock_guard<std::mutex> lock(dataMutex);
 
             // Loop through audio data and draw the waveform
-            for (size_t i = 0; i < period_size; ++i) {
+            for (size_t x = 0; x < WINDOW_WIDTH; ++x) {
                 // Calculate time based on sample rate (1/48000 per sample)
-                float time = static_cast<float>(i) / 48000.0f; // Time in seconds for each sample
-
-                // Scale the time to fit within the window width
-                int x = static_cast<int>(time * 0.1 * WINDOW_WIDTH);
+                float time = (static_cast<float>(x) / WINDOW_WIDTH)*period_size; // Time in seconds for each sample
 
                 // Map audio data to the y-axis (amplitude scaling)
-                int y = (dataPtr[i] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
+                int y = (dataPtr[static_cast<int>time] * (WINDOW_HEIGHT / 2)) / 32768 + (WINDOW_HEIGHT / 2);
 
                 // Ensure the coordinates are within the window bounds
                 x = clamp(x, 0, WINDOW_WIDTH - 1);
