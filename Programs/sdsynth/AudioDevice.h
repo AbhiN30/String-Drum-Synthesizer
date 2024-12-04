@@ -18,6 +18,8 @@ public:
 
     void processBuffer();
 
+    Synth& getSynth() { return synth; }
+
 private:
     void startAudioThread();
 

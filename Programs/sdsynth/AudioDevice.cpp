@@ -4,7 +4,7 @@
 
 AudioDevice::AudioDevice() 
     : isPlaying{false}
-    , data(period_size << 1) 
+    , data(period_size << 1, 0) 
     , synth(target_sample_rate) {
     dataPtr = &data.data()[0];
 }

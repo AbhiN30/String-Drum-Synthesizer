@@ -129,6 +129,7 @@ void Run()
 		}
 	}
 }
+
 /**
   * @brief  Redirects printf output to UART.
   * @param  ch: The character to output.

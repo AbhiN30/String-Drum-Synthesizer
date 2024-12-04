@@ -2,17 +2,29 @@
 #include <cstdlib>
 #include <string.h>
 #include <math.h>
+#include <wiringPi.h>
+#include <unistd.h>
 #include "rtmidi/RtMidi.h"
 #include "AudioDevice.h"
+#include "EmotiveKnob.h"
 
-AudioDevice audio_device;
- 
+// AudioDevice audio_device;
+
+enum MidiEvents {
+	NOTE_ON = 144,
+	NOTE_OFF = 128,
+};
+
 void HandleMidiMessage(double deltatime, std::vector< unsigned char > *message, void *userData) {
 	unsigned int nBytes = message->size();
-	for ( unsigned int i=0; i<nBytes; i++ )
-		std::cout << "Byte " << i << " = " << (int)message->at(i) << ", ";
-	if ( nBytes > 0 )
-		std::cout << "stamp = " << deltatime << std::endl;
+	switch ((int)message->at(0)) {
+		case MidiEvents::NOTE_ON:
+			const double newPitch = 440.0 * pow(2.0, static_cast<double>((int)message->at(1) - 69) / 12.0);
+			// audio_device.getSynth().playNote(newPitch);
+			break;
+		// case MidiEvents::NOTE_OFF:
+		// 	break;
+	}
 }
 
 int getMidiPort(RtMidiIn *midi) {
@@ -53,22 +65,46 @@ RtMidiIn* connectToMidiDevice() {
  
 int main()
 {
-    // if (audio_device.initiallize() < 0) {
+	// if (audio_device.initiallize() < 0) {
     //     return -1;
     // }
 
-    // audio_device.play();
-
-
-
 	// RtMidiIn* midi = connectToMidiDevice();
-	// if (!midi) {
-	// 	return -1;
+	// while (!midi) {
+	// 	midi = connectToMidiDevice();
+	// 	printf("Waiting for MIDI device...\n");
+	// 	usleep(250000);
 	// }
 
-	// std::cout << "\nReading MIDI input ... press <enter> to quit.\n";
-	// char input;
-	// std::cin.get(input);
+	// printf("Reading MIDI input.\n");
+
+    // audio_device.play();
+
+	EmotiveKnob::setup();
+	EmotiveKnob testKnob0(0);
+	EmotiveKnob testKnob1(1);
+	EmotiveKnob testKnob4(4);
+
+	while (1) {
+		const short val0 = testKnob0.readValue();
+		const short val1 = testKnob1.readValue();
+		const short val4 = testKnob4.readValue();
+		printf("KNOB 0: %d, KNOB 1: %d, KNOB 4: %d\n", val0, val1, val4);
+		usleep(100000);
+		// printf("%d\n", testKnob0.readValue());
+		// for (int id = 0; id < 8; id++) {
+		// 	digitalWrite(KNOB_SELECT_C, (int)((id & 0b001)));
+		// 	digitalWrite(KNOB_SELECT_B, (int)((id & 0b010) > 0));
+		// 	digitalWrite(KNOB_SELECT_A, (int)((id & 0b100) > 0));
+		// }
+	}
+
+	char input;
+	std::cin.get(input);
+
+	EmotiveKnob::cleanup();
+
+
 
 	// // Clean up
 	// delete midi;

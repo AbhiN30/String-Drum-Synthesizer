@@ -2,7 +2,7 @@
 ../Core/Src/main.c:87:6:HAL_I2S_TxCpltCallback	0	static
 ../Core/Src/main.c:93:6:GetNextBuffer	0	static
 ../Core/Src/main.c:106:6:Run	24	static
-../Core/Src/main.c:137:5:__io_putchar	16	static
-../Core/Src/main.c:193:6:SystemClock_Config	96	static,ignoring_inline_asm
-../Core/Src/main.c:150:5:main	56	static,ignoring_inline_asm
-../Core/Src/main.c:425:6:Error_Handler	0	static,ignoring_inline_asm
+../Core/Src/main.c:138:5:__io_putchar	16	static
+../Core/Src/main.c:196:6:SystemClock_Config	96	static,ignoring_inline_asm
+../Core/Src/main.c:151:5:main	56	static,ignoring_inline_asm
+../Core/Src/main.c:428:6:Error_Handler	0	static,ignoring_inline_asm
