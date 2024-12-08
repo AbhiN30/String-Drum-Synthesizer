@@ -2,13 +2,19 @@
 #include <cstdlib>
 #include <string.h>
 #include <math.h>
+#include <thread>
+#include <pthread.h>
 #include <wiringPi.h>
 #include <unistd.h>
 #include "rtmidi/RtMidi.h"
 #include "AudioDevice.h"
 #include "EmotiveKnob.h"
 
-// AudioDevice audio_device;
+short knob_vals[8] = {};
+AudioDevice audio_device;
+
+unsigned char prevMidiMsgEvent = 0;
+unsigned char prevMidiMsgPitch = 0;
 
 enum MidiEvents {
 	NOTE_ON = 144,
@@ -19,8 +25,15 @@ void HandleMidiMessage(double deltatime, std::vector< unsigned char > *message, 
 	unsigned int nBytes = message->size();
 	switch ((int)message->at(0)) {
 		case MidiEvents::NOTE_ON:
+			if (message->at(1) == prevMidiMsgPitch && deltatime < 0.0025) {
+				break;
+			}
+
+			audio_device.getSynth().startLatencyTimer();
+
+			prevMidiMsgPitch = message->at(1);
 			const double newPitch = 440.0 * pow(2.0, static_cast<double>((int)message->at(1) - 69) / 12.0);
-			// audio_device.getSynth().playNote(newPitch);
+			audio_device.getSynth().playNote(newPitch);
 			break;
 		// case MidiEvents::NOTE_OFF:
 		// 	break;
@@ -62,52 +75,69 @@ RtMidiIn* connectToMidiDevice() {
 
 	return midi;
 }
+
+void playAudio() {
+	audio_device.play();
+}
  
 int main()
 {
-	// if (audio_device.initiallize() < 0) {
-    //     return -1;
-    // }
+	if (audio_device.initiallize() < 0) {
+        return -1;
+    }
 
-	// RtMidiIn* midi = connectToMidiDevice();
-	// while (!midi) {
-	// 	midi = connectToMidiDevice();
-	// 	printf("Waiting for MIDI device...\n");
-	// 	usleep(250000);
-	// }
-
-	// printf("Reading MIDI input.\n");
-
-    // audio_device.play();
-
-	EmotiveKnob::setup();
-	EmotiveKnob testKnob0(0);
-	EmotiveKnob testKnob1(1);
-	EmotiveKnob testKnob4(4);
-
-	while (1) {
-		const short val0 = testKnob0.readValue();
-		const short val1 = testKnob1.readValue();
-		const short val4 = testKnob4.readValue();
-		printf("KNOB 0: %d, KNOB 1: %d, KNOB 4: %d\n", val0, val1, val4);
-		usleep(100000);
-		// printf("%d\n", testKnob0.readValue());
-		// for (int id = 0; id < 8; id++) {
-		// 	digitalWrite(KNOB_SELECT_C, (int)((id & 0b001)));
-		// 	digitalWrite(KNOB_SELECT_B, (int)((id & 0b010) > 0));
-		// 	digitalWrite(KNOB_SELECT_A, (int)((id & 0b100) > 0));
-		// }
+	RtMidiIn* midi = connectToMidiDevice();
+	while (!midi) {
+		midi = connectToMidiDevice();
+		printf("Waiting for MIDI device...\n");
+		usleep(250000);
 	}
 
-	char input;
-	std::cin.get(input);
+	printf("Reading MIDI input.\n");
+
+	std::thread audio_thread(playAudio);
+
+	sched_param param;
+    int policy;
+    pthread_getschedparam(audio_thread.native_handle(), &policy, &param);
+    param.sched_priority = sched_get_priority_max(SCHED_FIFO); // Use SCHED_FIFO for real-time scheduling
+    pthread_setschedparam(audio_thread.native_handle(), SCHED_FIFO, &param);
+
+
+	EmotiveKnob::setup();
+	
+	EmotiveKnob knobs[8] = {EmotiveKnob(0), 
+							EmotiveKnob(1),
+							EmotiveKnob(2),
+							EmotiveKnob(3),
+							EmotiveKnob(4),
+							EmotiveKnob(5),
+							EmotiveKnob(6),
+							EmotiveKnob(7)};
+
+	printf("\n\n\n");
+	while (1) {
+		for (int i = 0; i < 8; i++){
+			knob_vals[i] = knobs[i].readValue();
+		}
+
+		audio_device.getSynth().updateParams(knob_vals);
+
+		printf( "Sharpness     | %3d        \n"
+				"Strike Weight | %3d        \n"
+				"Dampening     | %3d        \n"
+				"Brightness    | %3d        \n"
+				"Boominess     | %3d        \n"
+				"Scratchiness  | %3d        \r\033[A\033[A\033[A\033[A\033[A", 
+				knob_vals[0], knob_vals[1], knob_vals[4], knob_vals[5], knob_vals[6], knob_vals[7]);
+	}
+
+	audio_thread.join();
 
 	EmotiveKnob::cleanup();
 
-
-
-	// // Clean up
-	// delete midi;
+	// Clean up
+	delete midi;
 
 	return 0;
 }

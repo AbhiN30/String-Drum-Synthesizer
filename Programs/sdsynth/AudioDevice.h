@@ -40,8 +40,8 @@ private:
 
     bool isPlaying;
 
-    std::vector<short> data;
-    short* dataPtr;
+    std::vector<unsigned char> data;
+    unsigned char* dataPtr;
 
     Synth synth;
 };

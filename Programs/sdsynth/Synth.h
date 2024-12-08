@@ -1,7 +1,9 @@
 #pragma once
 
 #include <climits>
+#include <chrono>
 #include <random>
+#include <stdio.h>
 #include <vector>
 
 template<typename SampleType>
@@ -71,8 +73,13 @@ class Synth {
 public:
     Synth(double _sample_rate);
     ~Synth();
-    void processBuffer(short* buffer, const int buffer_size);
+    void processBuffer(unsigned char* buffer, const int buffer_size);
     void playNote(double nextPitch);
+
+    void updateParams(short* knob_vals);
+
+    void startLatencyTimer();
+    void stopLatencyTimer();
 
 private:
     double sample_rate;
@@ -85,14 +92,18 @@ private:
     double feedback;
     double tail;
 
-    // double brightness; // lpf cutoff
-    // double boominess; // hpf cutoff
+    double brightness; // lpf cutoff
+    double boominess; // hpf cutoff
 
     const double FilterQ;
 
     double strike_weight;
     double osc_freq;
     double osc_phase;
+
+    double sharpness;
+
+    double dampening;
 
     CircularBuffer<double> circular_buffer;
 
@@ -102,5 +113,7 @@ private:
     Filter<double> lowpassFilter;
     Filter<double> highpassFilter;
     Filter<double> peakFilter;
+
+    std::chrono::time_point<std::chrono::steady_clock> timer;
 };
 

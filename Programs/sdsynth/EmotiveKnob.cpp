@@ -42,7 +42,7 @@ unsigned char EmotiveKnob::readValue()
     for (int i = 0; i < 8; i++) {
         value |= digitalRead(i) << i;
     }
-
+    
     return value;
 }
 
@@ -50,5 +50,5 @@ void EmotiveKnob::selectKnob() {
     digitalWrite(KNOB_SELECT_C, (int)((id & 0b001)));
     digitalWrite(KNOB_SELECT_B, (int)((id & 0b010) > 0));
     digitalWrite(KNOB_SELECT_A, (int)((id & 0b100) > 0));
-    usleep(2500); // TODO CAN THIS BE LOWERED?
+    usleep(2500);
 }
