@@ -42,8 +42,8 @@ The objectives and responsibilities for the week were initially set in the Desig
 
 TA Meeting Notes:
 During the TA meeting for this week, Manvi mainly gave us some feedback on our Design Document and let us know that we needed to fix up our 
-block diagram to make it more compact, and add one more ethical concern for the Design Document. From her feedback from the previous week, I
-redrew our visual aid with more specifically labeled components and dimensions as shown below.
+block diagram to make it less colorful and include voltages and arrow labels, and add one more ethical concern for the Design Document. 
+From her feedback from the previous week, I redrew our visual aid with more specifically labeled components and dimensions as shown below.
 
 ![Alt text](Images/Physical-Design.png)
 
@@ -55,4 +55,30 @@ worked on the Teamwork Evaluation Form to provide some early feedback on our tea
 
 Partner Summary:
 - Added additional detail to the tolerance analysis from a hardware perspective
-- Started building the subsystem schematics on KiCAD 
+- Started building the subsystem schematics on KiCAD
+
+# Week 3: 10/21/2024-10/25/2024
+
+The objectives and responsibilities for the week were initially set in the Design Document as follows...
+1. Solder components to PCB (Joel)
+2. Configure PCB Enclosure with necessary openings (Abhi)
+
+TA Meeting Notes:
+During the TA meeting for this week, Manvi gave us some feedback on our subsystem circuit design, mostly telling us that it looked good and we needed to start prioritizing
+getting our PCB design done. From her feedback from the previous week, I redrew our block diagram to be less colorful and be more thoroughly labeled.
+
+Initial Block Diagram:
+![Alt text](Images/Initial-Block-Diagram.png)
+
+Updated Block Diagram:
+![Alt text](Images/Updated-Block-Diagram.png)
+
+Record of what was accomplished:
+In terms of our accomplishments for the week, I fixed the errors in our circuit schematic, specifically in the Screen subsystem. I had initially read the datasheet incorrectly,
+so I needed to reconfigure some of the pins, such as the HSYNC, VSYNC, HPD, as well as some of the TMDS signal inputs to the HDMI port.
+
+Shown below is our updated Screen Subsystem Schematic:
+![Alt text](Images/Fixed-Screen-Schematic.png)
+
+Partner Summary:
+- After I fixed the circuit schematic for the Screen subsystem, Joel started fixing the traces for it within the actual PCB design.
