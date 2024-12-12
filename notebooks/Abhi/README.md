@@ -85,3 +85,22 @@ Shown below is our updated Screen Subsystem Schematic:
 
 Partner Summary:
 - After I fixed the circuit schematic for the Screen subsystem, Joel started fixing the traces for it within the actual PCB design.
+
+# Week 4: 10/28/2024-11/01/2024
+
+The objectives and responsibilities for the week were initially set in the Design Document as follows...
+1. Individually test Hardware Subsystems to check if R&V is met (Joel)
+2. Individually test Software Subsystems to check if R&V is met (Abhi)
+
+TA Meeting Notes:
+During the TA meeting for this week, Manvi mostly just helped us debug some of the issues with our PCB design.
+
+Record of what was accomplished:
+In terms of our accomplishments for the week, Joel and I finalized our PCB design.
+
+Shown below is our finalized PCB design:
+
+![Alt text](Images/PCB-Design.png)
+
+Partner Summary:
+- After we finished up our PCB design, Joel sent the files over to Manvi to place our PCB order. 
