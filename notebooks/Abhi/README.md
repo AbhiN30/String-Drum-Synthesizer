@@ -68,9 +68,11 @@ During the TA meeting for this week, Manvi gave us some feedback on our subsyste
 getting our PCB design done. From her feedback from the previous week, I redrew our block diagram to be less colorful and be more thoroughly labeled.
 
 Initial Block Diagram:
+
 ![Alt text](Images/Initial-Block-Diagram.png)
 
 Updated Block Diagram:
+
 ![Alt text](Images/Updated-Block-Diagram.png)
 
 Record of what was accomplished:
@@ -78,6 +80,7 @@ In terms of our accomplishments for the week, I fixed the errors in our circuit 
 so I needed to reconfigure some of the pins, such as the HSYNC, VSYNC, HPD, as well as some of the TMDS signal inputs to the HDMI port.
 
 Shown below is our updated Screen Subsystem Schematic:
+
 ![Alt text](Images/Fixed-Screen-Schematic.png)
 
 Partner Summary:
