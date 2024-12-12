@@ -45,7 +45,7 @@ During the TA meeting for this week, Manvi mainly gave us some feedback on our D
 block diagram to make it more compact, and add one more ethical concern for the Design Document. From her feedback from the previous week, I
 redrew our visual aid with more specifically labeled components and dimensions as shown below.
 
-![Alt text](Images/Physical Design Drawing.png)
+![Alt text](Images/Physical-Design.png)
 
 Record of what was accomplished:
 In terms of our accomplishments for the week, we were able to finalize our components list and I placed the orders for our group as shown in the image below. We also both
