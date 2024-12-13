@@ -30,7 +30,8 @@ Record of what was accomplished:
 
 In terms of our accomplishments for the week, we were able to meet to finalize our Design Document and prepare
 for the Design Review session. Overall, I thought it went pretty well as we were able to effectively communicate
-the different components of our block diagram and thoroughly explain our tolerance analysis for the Amplifier subsystem.
+the different components of our block diagram and thoroughly explain our tolerance analysis for the Amplifier subsystem. In addition to this,
+we had the opportunity to attend another group's design review presentation and we filled out the Peer Design Review Google Form.
 Unfortunately, we were unable to place the order for our parts this week, however we got much closer to finalizing our entire parts list.
 Since we were still deciding on parts, we didn't move on to developing the PCB schematic either.
 
@@ -218,3 +219,60 @@ N/A (Fall Break)
 Partner Summary:
 
 - During Fall Break, Joel took some time to work on the Synthesizer algorithm in C++ and also, write some code to read the values from the Emotive Knobs on the Raspberry Pi.
+
+# Weeks 9 & 10: 12/02/2024-12/13/2024
+
+The objectives and responsibilities for the week were initially set in the Design Document as follows...
+
+1. Final Demo/Presentation (Everyone)
+
+TA Meeting Notes:
+
+N/A
+
+Record of what was accomplished:
+
+In terms of our accomplishments for the week, we were able to finally build an enclosure for our Synthesizer. We did this by first heading to the FabLab on campus to be our primary workstation to complete this step. 
+In the FabLab, we spent a few hours sanding down a Metal Container, drilling holes into the container for our ports and Emotive knobs, sanding down these newly made holes to ensure the enclosure would be safe to hold, and lastly,
+printing out labels for each of the Emotive knobs and ports for the user to have easy accessibility to our design.
+
+Shown below is our final physical design:
+
+![Alt text](Images/Final-Physical-Design.png)
+
+In addition to this, we worked on writing a script to convert the analog Emotive Knob values to be digital inputs to the Raspberry Pi. 
+
+The program worked as follows (single-knob perspective) (explained in more detail in the final report):
+
+1. Turn an emotive knob in a particular direction to toggle the voltage between 0 and 3.3 Volts.
+2. Simultaneously, three select bits will be sent from the Raspberry Pi to determine which knob to read (in this case, the knob that was turned).
+3. Next, it will convert the analog value of the knob into a digital one using the STM32 NucleoBoard's built-in ADC.
+4. After doing this, it will take the converted value and translate it into 8 separate bits to be sent in parallel back to the Raspberry Pi to be processed within the Synthesizer Algorithm.
+5. Steps 2-4 will be constantly repeated in order to provide real-time updates of the knob values.
+
+Shown below is our final Emotive knobs code on the STM32 NucleoBoard:
+
+![Alt text](Images/Final-Emotive-Controls-Code.png)
+
+Moving on, I also finalized our design document with all of the changes we had made to our system. For example, the first week I was trying to implement the Screen subsystem by first trying to visualize an arbitrary sine wave on the Raspberry Pi, however, after many attempts, I kept
+getting horizontal lines that panned across the entire window that would flash quickly up and down the screen. Because we were getting so close to the final demo day, I decided it was best to move on to fixing different parts of our project instead,
+such as the Emotive Controls as listed before, and thus, removed our Screen subsystem from our final Design Document.
+
+Another highlight of the first week was that we completed our final demonstration and although we weren't able to fully complete our project, we were still able to demonstrate a semi-functional product as a whole with most subsystems working as intended. In this week, we also
+attended and filled out the form for one of our peer's final demonstration that was focused on Soil Moisture readings, which was something I found very interesting as I conducted research in this field last year. Lastly, in this week, we finalized our final presentation slide deck.
+
+Here's a link to our Extra Credit Demo Video to show our project's capabilities by this final week:
+https://www.youtube.com/embed/Ir_v7jes1CY?si=TUmOt4E8HuO2rle-
+
+This week, we completed our Final Presentation and attended one of our peer's final presentation and filled out the google form for it. I thought it was really cool to learn about how they designed and made calculations for their battery recharging system. In addition to this,
+we also completed our final report and completed our Lab Checkout with Manvi.
+
+Partner Summary:
+
+- In the first week, Joel specifically focused on finishing the Synthesizer Subsystem on the Raspberry Pi.
+
+# Final Conclusion
+
+Although we didn't follow much of our initial weekly schedule that we created in the early stages of the Design Document, by the end of this semester, we still were able to find many successes with our project. Starting with the Power Block subsystem, we were able to produce a stable 5 Volts and 3.3 Volts for the entire system as we initially intended. Next, in the External MIDI Device subsystem, we were able to retrieve data from the keyboard upon keypress, such as the pitch of the key, with very low latency. Moving on to the Emotive Controls subsystem, we were able to both convert the analog values of the knobs into digital ones and also, send these values to the main processor within the Raspberry Pi as they were being updated in real-time. In terms of the final functionality, we were able to get our modified Karplus-Strong Algorithm working in practice as we could hear sound after each keypress and also tune the sound to our liking using the physical Emotive knobs.
+
+
