@@ -146,7 +146,7 @@ Partner Summary:
 - During this week, Joel worked on building a physical circuit for the Amplifier subsystem to verify that the circuit that was drawn in KiCAD was
 functional in practice.
 
-# Week 6: 11/04/2024-11/08/2024
+# Week 6: 11/11/2024-11/15/2024
 
 The objectives and responsibilities for the week were initially set in the Design Document as follows...
 
@@ -175,3 +175,28 @@ so we decided to switch to using an STM32 NucleoBoard instead.
 Partner Summary:
 
 - During this week, Joel soldered all of the components from the various subsystems onto the PCB and tested the Power Block and Amplifier subsystems on the PCB to verify its functionality.
+
+# Week 7: 11/18/2024-11/22/2024
+
+The objectives and responsibilities for the week were initially set in the Design Document as follows...
+
+1. Preparing for and attending the Mock Demo (Everyone)
+
+TA Meeting Notes:
+
+This was one of our more important TA meetings as it was the one where we performed our Mock Demo. Unfortunately, we ran into many errors in our design and thus, we weren't able to show a fully functional product
+by this point. However, we were able to show that the system could make sound and also, that the Emotive knob values could update in real-time. Also, since we were working so intensely on trying to get the Synthesizer to work, we didn't prepare much for the demo itself and so, our presentation of our project was very scattered and unorganized. Manvi's feedback for us this week was that we needed to practice a structure for how we would demonstrate our project during the final demo and also, that we needed to fix the functionality of our subsystems to have a presentable final product.
+
+Record of what was accomplished:
+
+In terms of my accomplishments for the week, I finished writing the script to blink an LED on and off using C to prove that our new STM32 NucleoBoard was working properly. Once I did this, we tested the code and it worked as expected, proving
+that the STM32 NucleoBoard was a viable option to provide some of our system processing. I also finished up reading the STM32 documentation and figured out to configure the pins on the microcontroller to perform their required functions, write code for the processor to use,
+debug the code using GDB, and lastly, generate the binary file to be uploaded to the processor to constantly perform the computations that we need. I learned that the previously listed steps would need to be completed via the STM32CubeIDE software and in order to upload the binary file, we would need to use the STM32CubeProgrammer Software. Other than this, we were able to write some code to prove that the Emotive knob values could be digitized and updated as they were being changed.
+
+Shown below is a snippet of the preliminary code we wrote to read the Emotive knob values as they were updated:
+
+![Alt text](Images/Emotive-Knobs-Test.png)
+
+Partner Summary:
+
+- During this week, Joel finished building the Power Block and Amplifier subsystems. He also wrote some code to create a double buffer system for Audio output with the I2S protocol on the STM32 NucleoBoard.
