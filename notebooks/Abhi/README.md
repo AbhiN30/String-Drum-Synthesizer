@@ -144,4 +144,34 @@ Shown below is our finalized PCB design:
 Partner Summary:
 
 - During this week, Joel worked on building a physical circuit for the Amplifier subsystem to verify that the circuit that was drawn in KiCAD was
-functional in practice. 
+functional in practice.
+
+# Week 6: 11/04/2024-11/08/2024
+
+The objectives and responsibilities for the week were initially set in the Design Document as follows...
+
+1. Debugging (Everyone)
+
+TA Meeting Notes:
+
+During the TA meeting for this week, I went over some of my progress with Manvi. I showed her some of the test scripts I had written for the Microprocessor and
+explained to her that I'm still reading through the relevant STM32 documentation about programming the Microprocessor and flashing firmware to it.
+
+Record of what was accomplished:
+
+In terms of my accomplishments for the week, I started writing a script to write "Hello World!" on the Microprocessor using C to prove that the Microprocessor could perform
+computations. However, after writing some skeleton code, I decided to instead prove that it was working from a visual perspective and so, I instead wrote code to write to a GPIO pin on the processor, which
+I would connect directly to an LED and if the LED lit up after the program ran, this would verify that the Microcontroller was functioning as expected.
+
+Shown below is a snippet of my "Hello World!" test program:
+
+![Alt text](Images/HelloWorld-Code-Sample.png)
+
+Another accomplishment for the week was that we were able to begin testing the Microcontroller and Emotive Controls subsystems on the PCB. After soldering the Power Block subsystem and connecting it to power, the potentiometers
+in the Emotive Controls subsystem were providing accurate voltage readings from the multimeter, however we realized that the Microprocessor was not receiving any power. To debug this, we went back to the PCB design on KiCAD and 
+found that some of the 3.3 V trace lines weren't properly connected to the Vdd pins. To fix this issue, we attempted to connect some jumper wires to these pins, but this ended up causing our Microprocessor to overheat significantly,
+so we decided to switch to using an STM32 NucleoBoard instead.
+
+Partner Summary:
+
+- During this week, Joel soldered all of the components from the various subsystems onto the PCB and tested the Power Block and Amplifier subsystems on the PCB to verify its functionality.
