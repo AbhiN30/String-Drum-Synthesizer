@@ -200,3 +200,21 @@ Shown below is a snippet of the preliminary code we wrote to read the Emotive kn
 Partner Summary:
 
 - During this week, Joel finished building the Power Block and Amplifier subsystems. He also wrote some code to create a double buffer system for Audio output with the I2S protocol on the STM32 NucleoBoard.
+
+# Week 8: 11/25/2024-11/29/2024
+
+The objectives and responsibilities for the week were initially set in the Design Document as follows...
+
+1. N/A, Fall Break (Everyone)
+
+TA Meeting Notes:
+
+N/A
+
+Record of what was accomplished:
+
+N/A (Fall Break)
+
+Partner Summary:
+
+- During Fall Break, Joel took some time to work on the Synthesizer algorithm in C++ and also, write some code to read the values from the Emotive Knobs on the Raspberry Pi.
