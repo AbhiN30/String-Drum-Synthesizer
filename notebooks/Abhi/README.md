@@ -5,7 +5,7 @@ Dates:
 - Week 2: 10/14/2024-10/18/2024
 - Week 3: 10/21/2024-10/25/2024
 - Week 4: 10/28/2024-11/01/2024
-- Week 5: 11/04/2024-10/08/2024
+- Week 5: 11/04/2024-11/08/2024
 - Week 6: 11/11/2024-11/15/2024
 - Week 7: 11/18/2024-11/22/2024
 - Week 8: 11/25/2024-11/29/2024
@@ -119,4 +119,29 @@ Shown below is our finalized PCB design:
 
 Partner Summary:
 
-- After we finished up our PCB design, Joel sent the files over to Manvi to place our PCB order. 
+- After we finished up our PCB design, Joel sent the files over to Manvi to place our PCB order.
+
+# Week 5: 11/04/2024-11/08/2024
+
+The objectives and responsibilities for the week were initially set in the Design Document as follows...
+
+1. Integrate hardware and software subsystems (Everyone)
+
+TA Meeting Notes:
+
+During the TA meeting for this week, Manvi gave us some feedback on our Design Document, mainly saying that we needed to fix
+our block diagram by making it more compact and increasing the font-size within the blocks.
+
+Record of what was accomplished:
+
+In terms of my accomplishments for the week, I fixed the block diagram according to Manvi's comments and also, completed my individual progress
+report that highlighted my progress with the Screen subsystem at the circuit level and my plans for the software integration in the coming weeks.
+
+Shown below is our finalized PCB design:
+
+![Alt text](Images/Final-Block-Diagram.png)
+
+Partner Summary:
+
+- During this week, Joel worked on building a physical circuit for the Amplifier subsystem to verify that the circuit that was drawn in KiCAD was
+functional in practice. 
