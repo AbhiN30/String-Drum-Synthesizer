@@ -264,7 +264,7 @@ attended and filled out the form for one of our peer's final demonstration that 
 Here's a link to our Extra Credit Demo Video to show our project's capabilities by this final week:
 https://www.youtube.com/embed/Ir_v7jes1CY?si=TUmOt4E8HuO2rle-
 
-This week, we completed our Final Presentation and attended one of our peer's final presentation and filled out the google form for it. I thought it was really cool to learn about how they designed and made calculations for their battery recharging system. In addition to this,
+In Week 10, we completed our Final Presentation and attended one of our peer's final presentation and filled out the google form for it. I thought it was really cool to learn about how they designed and made calculations for their battery recharging system. In addition to this,
 we also completed our final report and completed our Lab Checkout with Manvi.
 
 Partner Summary:
