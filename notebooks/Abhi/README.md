@@ -271,7 +271,7 @@ Partner Summary:
 
 - In the first week, Joel specifically focused on finishing the Synthesizer Subsystem on the Raspberry Pi.
 
-# Final Conclusion
+# Conclusions
 
 Although we didn't follow much of our initial weekly schedule that we created in the early stages of the Design Document, by the end of this semester, we still were able to find many successes with our project. Starting with the Power Block subsystem, we were able to produce a stable 5 Volts and 3.3 Volts for the entire system as we initially intended. Next, in the External MIDI Device subsystem, we were able to retrieve data from the keyboard upon keypress, such as the pitch of the key, with very low latency. Moving on to the Emotive Controls subsystem, we were able to both convert the analog values of the knobs into digital ones and also, send these values to the main processor within the Raspberry Pi as they were being updated in real-time. In terms of the final functionality, we were able to get our modified Karplus-Strong Algorithm working in practice as we could hear sound after each keypress and also tune the sound to our liking using the physical Emotive knobs.
 
