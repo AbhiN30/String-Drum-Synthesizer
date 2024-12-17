@@ -218,7 +218,7 @@ Here is the STM32 emotive knob callback function:
 ![Alt text](Images/Final-Emotive-Controls-Code.png)
 
 Here is the Raspberry pi emotive knob readValue function:
-![Alt text](Emotive_Knobs_RPI.png)
+![Alt text](Images/Emotive_Knobs_RPI.png)
 
 - SOMETHING ABOUT SYNTH ALGORITHM
 - Final demo and presentation
