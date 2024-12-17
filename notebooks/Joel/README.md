@@ -193,3 +193,40 @@ Here is the Rasbperry Pi double buffer code:
 
 - Took a break
 
+# Weeks 9 & 10: 12/02/2024-12/13/2024
+
+## This week's objectives and responsibilities:
+
+1. Final Demo/Presentation (Everyone)
+
+TA Meeting Notes:
+
+N/A
+
+## Record of what was accomplished:
+
+This week, Abhi and I built the enclosure by sanding a metal tea box and drilling holes for knobs, a switch, and USB/HDMI ports for the Raspberry Pi. We printed labels for the knobs and ports.
+
+Here is our physical design:
+![Alt text](Images/Final-Physical-Design.png)
+
+Next, I tried using the ADC0808 chip which is an 8-bit ADC and 8 channel multiplexer to convert the voltages of the knobs into 8-bit parallel signals. This did not work and I wasn't sure why. Being days before our demo, I suggested we interface with the STM32 as we had already successfully used it's ADC inputs to read values from the Emotive knobs.
+
+To transfer knob data, we wrote a program on the STM32 that continuously outputs 8-bits (via GPIO pins) from a single knob. The Raspberry Pi sends 3 select bits to the STM32 to choose which knob value to read. The Raspberry Pi cycles through each knob continuously updating its value and storing it in an array in a separate thread from the audio processing. Emotive knobs update on the order of milliseconds while the audio buffer is processed in 5.333 milliseconds (256 samples / 48 kHz sample rate). This means we are at best getting a 1-2 knob values per audio buffer. However, this is okay since 
+
+Here is the STM32 emotive knob callback function:
+![Alt text](Images/Final-Emotive-Controls-Code.png)
+
+Here is the Raspberry pi emotive knob readValue function:
+![Alt text](Emotive_Knobs_RPI.png)
+
+- SOMETHING ABOUT SYNTH ALGORITHM
+- Final demo and presentation
+- peer review
+
+Partner Summary:
+
+- Worked on Emotive Knob subsystem with me
+- Updated Design Document
+
+# Conclusions
