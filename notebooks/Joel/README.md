@@ -218,15 +218,25 @@ Here is the STM32 emotive knob callback function:
 ![Alt text](Images/Final-Emotive-Controls-Code.png)
 
 Here is the Raspberry pi emotive knob readValue function:
-![Alt text](Emotive_Knobs_RPI.png)
+![Alt text](Images/Emotive_Knobs_RPI.png)
 
-- SOMETHING ABOUT SYNTH ALGORITHM
-- Final demo and presentation
-- peer review
+I implemented the Modified Karplus-Strong algorithm this week too. The first step was to generate white noise. I first tried std::normal_distribution, but the noise didn't sound as spectrally white. I did not have time to properly test this with a spectrogram, so I just tried to verify that it sounded like the Ocean. std::uniform_distribution worked better for this purpose. Then, I turned this into a short pulse which had a length that was a function of Scratchiness and also inversely proportional to pitch.
+
+The second step was to repeat the noise pulse using a circular buffer. In order to properly repeat the pulse, I had to call "circular_buffer.popSample", do some processing, then call "circular_buffer.pushSample."
+
+Here is the CircularBuffer class definition:
+![Alt text](Images/Circular_buffer_class.png)
+
+The next step to develop the synthesizer was to create a biquad filter. I chose a biquad filter since I needed a highpass, lowpass, and peak filter. The same architecture can be used for all three by simply changing the coefficients. To test the filters, I filtered continuous white noise from earlier and set various cutoff frequencies. Again I had to verify by ear using simple sanity checks due to lack of time. At a cutoff of 20 Hz, the highpass let all the sound through and the lowpass was silent. The opposite was true of 20 kHz. The peak filter was harder to verify, but acted like a mild highpass when set to a low frequency such as 100 Hz with a low Q (~0.1-0.5) and negative gain (dB). Of course not all low frequecies were blocked but they shouldn't have been. The opposite was also true when set to a high frequency such as 10 kHZ. 
+
+I then incorporated the filters into the algorithm. Once the dampening parameter was added, I was able to verify that the Q parameter from the peak filter worked as well since a low Q meant high dampening and a high Q meant low dampening (following how the mock up from Week 1 sounded when changing this parameter). The peak filter is set to 3.6 kHz and -6.0dB gain in the final algorithm since these values sounded good to me.
+
+Here is the Filter class definition:
+![Alt text](Images/Filter_class.png)
+
+I created a simple sine oscillator using std::sin. I tried to write code for a fast sine approximation, but it didn't work in time for the demo. I changed the pitch of the oscillator and outputted a steady tone. Low frequencies sounded lower than high frequencies, which was all I was able to verify. Lastly, I added the oscillator to the noise pulse in the full algorithm.
 
 Partner Summary:
 
 - Worked on Emotive Knob subsystem with me
 - Updated Design Document
-
-# Conclusions
