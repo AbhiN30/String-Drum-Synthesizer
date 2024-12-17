@@ -2,16 +2,16 @@
 
 Dates:
 
-Week 1: 10/07/2024-10/11/2024
-Week 2: 10/14/2024-10/18/2024
-Week 3: 10/21/2024-10/25/2024
-Week 4: 10/28/2024-11/01/2024
-Week 5: 11/04/2024-11/08/2024
-Week 6: 11/11/2024-11/15/2024
-Week 7: 11/18/2024-11/22/2024
-Week 8: 11/25/2024-11/29/2024
-Week 9: 12/02/2024-12/06/2024
-Week 10: 12/09/2024-12/13/2024
+- Week 1: 10/07/2024-10/11/2024
+- Week 2: 10/14/2024-10/18/2024
+- Week 3: 10/21/2024-10/25/2024
+- Week 4: 10/28/2024-11/01/2024
+- Week 5: 11/04/2024-11/08/2024
+- Week 6: 11/11/2024-11/15/2024
+- Week 7: 11/18/2024-11/22/2024
+- Week 8: 11/25/2024-11/29/2024
+- Week 9: 12/02/2024-12/06/2024
+- Week 10: 12/09/2024-12/13/2024
 
 # Week 1: 10/07/2024-10/11/2024
 
@@ -152,6 +152,44 @@ Most of the double buffer code is in 3 functions. 2 are the full and half callba
 Below is the relavent double buffer code:
 ![Alt text](Images/STM32_Double_Buffer_Code.png)
 
+In addition, I tried to use an AD1856N DAC to convert the I2S signal to a PWM wave using the +/-2.5V from the power supply. The IC had no output when viewed with an oscilloscope. One attempt to rectify the problem was to try a larger power supply. In hindsight, I could have tested this with the bench power supply, but instead I spent a day remaking the power block using a 12VDC wall adapter in order to achieve +/-6V. 
+
 ## Partner Summary:
 
 - Abhi wrote code to read a value from an emotive knob.
+
+# Week 8: 11/25/2024-11/29/2024
+
+## This week's objectives and responsibilities:
+
+1. N/A, Fall Break (Everyone)
+
+## TA Meeting Notes:
+
+N/A
+
+## Record of what was accomplished:
+
+First, I soldered wires to a USB port and connected to the 5V power on the power supply (that uses a 12VDC wall adapter). When plugging in the MIDI keyboard, the voltage collapsed due to an inability to supply enough current since the keyboard requires 0.5A. I switched to the STM32 NucleoBoard's 5V pin to power which worked for the keyboard.
+
+The USB MIDI standard calls for a device and a host. The keyboard is classified as a device, so our board must function as a host. Specifically, our board must be an "Audio Class" USB host where MIDI is a special case. All that to say I used the MIDI drivers from [this project](https://github.com/Hypnotriod/midi-box-stm32). The debugger managed to start some of the USB host protocol but kept failing to enumerate which involves a sort of handshake between device and host in order find connected devices. The debugger would reach the enumeration stage, fail, then restart the protocol.
+
+Here is the code the debugger was stuck at:
+![Alt text](Images/USB_Enumeration.png)
+
+Debugging these protocols took too much time, so I pivoted to a Raspberry Pi which provided an operating system that has USB drivers. In addition, I was able to use [RtMidi](https://www.music.mcgill.ca/~gary/rtmidi/) which provided a single callback function to handle incoming MIDI messages.
+
+Here is the MIDI callback function:
+![Alt text](Images/USB_Enumeration.png)
+
+The last issue I tackled this week was getting sound out of the Raspberry Pi. I tried to output PWM waves using the General Purpose Input Output (GPIO) pins. I was unable to view the waveform through an oscilloscope when playing a WAV file from the terminal. However, I was able to hear the file when connecting the HDMI port to a monitor and connecting headphones to the same monitor. That sparked the idea to get a cheap USB adapter in order to move on to more exhilarating problems. To finish getting sound out of the Rasbperry Pi, I programmed a double buffer by loosely following [this tutorial](https://alsamodular.sourceforge.net/alsa_programming_howto.html).
+
+The main processing for the synthesizer will be done in the "processBuffer" function although for now it outputs a sine wave. One thing that confused me was that I am outputing 16-bit audio, but the audio buffer needed to be unsigned chars instead of shorts. However, the reason is because the most signficant byte and least significant bytes are flipped when using the ALSA library.
+
+Here is the Rasbperry Pi double buffer code:
+![Alt text](Images/Raspberry_Pi_Double_Buffer.png)
+
+## Partner Summary:
+
+- Took a break
+
