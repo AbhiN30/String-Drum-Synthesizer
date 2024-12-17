@@ -45,7 +45,7 @@ N/A (Worked on everything together this week)
 Manvi advised us to add another ethical concern for the Design Document and to clean up the block diagram. In addition, we discussed how to actually acheive a target output impedance. Together with Manvi, we concluded that we needed to conduct more research on the topic.
 
 Below is the final schematic:
-![Alt Text](Schematic.png)
+![Alt Text](Images/Schematic.png)
 
 ## Record of what was accomplished:
 
